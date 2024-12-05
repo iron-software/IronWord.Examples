@@ -1,19 +1,20 @@
-# How to Insert a Table into a DOCX File
+# How to Incorporate a Table into a DOCX Document
 
 ***Based on <https://ironsoftware.com/how-to/add-table/>***
 
 
-A table, consisting of rows and columns, is a fundamental tool for arranging data systematically in a grid format where each cell can hold content such as text, numbers, or images. This structured arrangement is crucial for creating organized presentations of information, scheduling events, or displaying data clearly.
+A table, essentially a matrix layout consisting of rows and columns, is a core component in organizing and displaying data in a document. Each row-column intersection forms a cell that can host various types of content like text or numbers, and is advantageous for structuring data efficiently, arranging schedules, or presenting information in an easily understandable way.
 
-## Table Insertion Guide
+## Inserting a Table into Your Document
 
-Tables play a pivotal role in structuring information within a Word document. Begin by creating an instance of the **Table** class with specified rows and columns. Next, personalize the table by setting styles like background color, shading, border styles, zebra striping, and overall width. Accessing a particular cell is straightforward using the **[row, column]** notation, where you can insert content ranging from text and images to complex elements like paragraphs or even other tables. Once configured, the table can be seamlessly integrated into your document.
+Incorporating a table into a Word document involves several straightforward steps. Initially, create an instance of the **Table** class by specifying the desired number of rows and columns. This setup allows for the customization of various styling elements such as the table's background color, shading, borders, zebra striping, and overall width. Additionally, you can populate each cell of the table by referring to its row and column indices, denoted as **[row, column]**. Cells are versatile, capable of containing texts, images, shapes—or even other tables. Once configured, the table can be seamlessly integrated into the document.
 
-Keep in mind that rows and columns are indexed starting from zero.
+The indices for rows and columns start from zero, known as zero-based indexing.
 
 ```cs
 using IronWord.Models.Enums;
 using IronWord;
+
 namespace ironword.AddTable
 {
     public class Section1
@@ -22,47 +23,48 @@ namespace ironword.AddTable
         {
             WordDocument doc = new WordDocument();
             
-            // Initialize a new table
+            // Initializing a new table instance
             Table table = new Table(5, 3);
             
-            // Set up the border style
+            // Setting up table border styles
             BorderStyle borderStyle = new BorderStyle()
             {
                 BorderColor = Color.Black,
                 BorderValue = BorderValues.Thick,
                 BorderSize = 5
             };
-
-            // Apply borders to the table
+            
+            // Applying border styles to table
             TableBorders tableBorders = new TableBorders()
             {
                 TopBorder = borderStyle,
                 RightBorder = borderStyle,
                 BottomBorder = borderStyle,
-                LeftBorder = borderStyle,
+                LeftBorder = borderStyle
             };
-
-            // Apply zebra striping for readability
+            
+            // Applying zebra striping for visual distinction
             table.Zebra = new ZebraColor("FFFFFF", "dddddd");
             table.Borders = tableBorders;
             
-            // Fill in the header row
+            // Filling table headers
             table[0, 0] = new TableCell(new Text("Number"));
             table[0, 1] = new TableCell(new Text("First Name"));
             table[0, 2] = new TableCell(new Text("Last Name"));
             
-            // Populate the table with sample data
+            // Adding sample data into the table
             for (int i = 1; i < table.Rows.Count; i++)
             {
                 table[i, 0].AddChild(new Text($"{i}"));
-                table[i, 1].AddChild(new Text("Sample Name"));
-                table[i, 2].AddChild(new Text("Sample Surname"));
+                table[i, 1].AddChild(new Text("-"));
+                table[i, 2].AddChild(new Text("-"));
             }
             
-            // Insert the table into the document
+            // Finalizing the table in the document
             doc.AddTable(table);
             
-            doc.Save("document.docx");
+            // Saving the document with the table
+            doc.Save("UpdatedDocument.docx");
         }
     }
 }
@@ -70,20 +72,22 @@ namespace ironword.AddTable
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/word/how-to/add-table/add-table.webp" alt="Add table" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/add-table/add-table.webp" alt="Example of added table" class="img-responsive add-shadow">
     </div>
 </div>
 
-The `AddContent` method in the TableCell class can manage a ContentElement, allowing the inclusion of various content types - from text and graphics to nested tables, which can be especially useful for detailed data representation.
+In terms of content management within the cells, the `AddContent` function of the TableCell class can accept any ContentElement object. This flexibility is particularly useful for embedding nested tables, which can dramatically enhance the data presentation in certain scenarios.
 
 ## Styling Options
 
-### Borders
+### Border Styling
 
-Discover the various styles for table borders available through the BorderValues enumeration:
+The following visual demonstrates various border styles available through the BorderValues enumeration:
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/word/how-to/add-table/border-value.webp" alt="Border values" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/add-table/border-value.webp" alt="Table border options" class="img-responsive add-shadow">
     </div>
 </div>
+
+In this comprehensive guide, we've demonstrated how to create, style, and implement tables into DOCX documents, enhancing both functionality and aesthetic appeal of your word-processing projects.

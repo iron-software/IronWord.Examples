@@ -5,34 +5,34 @@
 
 ## IronWord: Word Document Library for .NET
 
-**IronWord** is a specialized library from Iron Software designed to handle Word documents within .NET applications. It offers comprehensive capabilities such as:
+**IronWord** by Iron Software is a comprehensive library designed to handle Word documents in .NET applications.
 
-- Loading, editing, and saving Word and Docx documents.
-- PageSetup: Adjusting paper size, orientation, margins, and background settings.
-- TextRun: Managing text including styles, appending sections, and inserting images.
-- TextStyle: Controls over text appearance including font type, size, color, and decorations like bold, italic, and underline.
-- Paragraph: Inserting text elements, images, or shapes, and setting styles and lists.
-- Table: Creating and modifying table layouts, row insertion/removal, and cell merging.
-- Image: Embedding images with controls over wrapping, positioning, and sizing.
-- Shape: Incorporating graphic shapes with adjustable text wrapping, positioning, size, and rotation.
+- **Load, Manipulate, and Save**: Easily manage Word and `.docx` documents.
+- **PageSetup**: Set paper size, page orientation, and margins, and modify background colors.
+- **TextRun**: Manage text including styling, adding, or splitting content, and embedding images.
+- **TextStyle**: Control text appearance including font settings, color, decoration, and sizing.
+- **Paragraph**: Incorporate elements like text, images, and shapes, define styles, and apply bullet or numbered lists.
+- **Table**: Adjust table layouts by modifying rows, cells, and structures, and utilize merging and styling capabilities.
+- **Image**: Embed images with customizable settings for size, wrapping, and positioning.
+- **Shape**: Define shape dimensions, types, rotations, and text wrapping.
 
 ## Installation
 
 ### IronWord Library
 
-Installing IronWord is straightforward. To install, use the following command:
+For a swift installation of IronWord, use this command:
 
 ```shell
 Install-Package IronWord
 ```
 
-Or, download it directly from the [IronWord NuGet page](https://www.nuget.org/packages/IronWord).
+You can also download it directly from the [official IronWord NuGet page](https://www.nuget.org/packages/IronWord).
 
-Begin by importing the library with `using IronWord;` in your C# application.
+Post-installation, initiate your project by including `using IronWord;` at the beginning of your C# files.
 
 ## Applying License Key
 
-Activate IronWord by setting your license key right after the import statement with this code:
+To activate IronWord, insert your license or trial key into the `LicenseKey` property of the `License` class immediately after referencing IronWord in your code:
 
 ```csharp
 using IronWord;
@@ -50,14 +50,11 @@ namespace ironword.Quickstart
 
 ## Code Examples
 
-When working with DOCX files created by IronWord, you may need to upgrade the file format in Microsoft Word if it opens in **Compatibility Mode**. To do so:
-
-1. Navigate to 'File' > 'Info' and select "Convert."
-2. Confirm your action at the prompt to update the document to the new file format.
+When opening a DOCX file in Microsoft Word, ensure it's in the modern format and not Compatibility Mode by navigating to 'File' > 'Info' and selecting "Convert," followed by "OK" to update the file format.
 
 ## Create Word and Docx Document
 
-To generate a new Word document, initiate a `WordDocument` class and use the `SaveAs` method to save the document:
+Begin with constructing a new Word document by initializing the `WordDocument` class and then exporting it using `SaveAs`.
 
 ```csharp
 using IronWord.Models;
@@ -68,11 +65,16 @@ namespace ironword.Quickstart
     {
         public void Run()
         {
-            Paragraph paragraph = new Paragraph();
-            paragraph.AddText(new Text("Sample text"));
+            // Initialize new text element
+            Text textRun = new Text("Sample text");
             
+            Paragraph paragraph = new Paragraph();
+            paragraph.AddText(textRun);
+            
+            // Instantiate a Word document
             WordDocument doc = new WordDocument(paragraph);
             
+            // Save the document
             doc.SaveAs("document.docx");
         }
     }
@@ -81,7 +83,7 @@ namespace ironword.Quickstart
 
 ## Add Image
 
-Images can be incorporated within document structures like paragraphs or table cells. Here’s how to add an image:
+Integrate images into your document elements like `Paragraph`, `TableCell`, or `Section` with `AddImage`.
 
 ```csharp
 using IronWord.Models;
@@ -92,15 +94,22 @@ namespace ironword.Quickstart
     {
         public void Run()
         {
+            // Open an existing document
             WordDocument doc = new WordDocument("document.docx");
-
+            
+            // Configure a new image
             IronWord.Models.Image image = new IronWord.Models.Image("image.jpg");
-            image.SetDimensions(250, 200);
-
+            image.Width = 250;
+            image.Height = 200;
             Paragraph paragraph = new Paragraph();
+            
+            // Insert the image into the paragraph
             paragraph.AddImage(image);
             
+            // Append paragraph to the document
             doc.AddParagraph(paragraph);
+            
+            // Output the document
             doc.SaveAs("save_document.docx");
         }
     }
@@ -109,7 +118,7 @@ namespace ironword.Quickstart
 
 ## Add Table
 
-Constructing a table offers flexibility in design and formatting, especially with border styles:
+Design detailed tables with customizable cells and styles.
 
 ```csharp
 using IronWord.Models;
@@ -121,34 +130,47 @@ namespace ironword.Quickstart
         public void Run()
         {
             TableCell cell = new TableCell();
-            cell.AddChild(new Paragraph(new Text("Sample text")));
 
-            BorderStyle borderStyle = new BorderStyle();
-            borderStyle.ConfigureBorder(Color.Black, IronWord.Models.Enums.BorderValues.Thick, 5);
-            
-            TableBorders tableBorders = new TableBorders(borderStyle, borderStyle, borderStyle, borderStyle);
-            cell.SetBorders(tableBorders);
-            
+            Text textRun = new Text("Sample text");
+
+            cell.AddChild(new Paragraph(textRun));
+
+            BorderStyle borderStyle = new BorderStyle() {
+                BorderColor = Color.Black,
+                BorderValue = IronWord.Models.Enums.BorderValues.Thick,
+                BorderSize = 5
+            };
+
+            TableBorders tableBorders = new TableBorders() {
+                TopBorder = borderStyle,
+                RightBorder = borderStyle,
+                BottomBorder = borderStyle,
+                LeftBorder = borderStyle
+            };
+
+            cell.Borders = tableBorders;
+
             TableRow row = new TableRow();
             row.AddCell(cell);
             row.AddCell(cell);
-            
+
             Table table = new Table();
             table.AddRow(row);
-            
+
             WordDocument doc = new WordDocument(table);
+
             doc.SaveAs("Document.docx");
         }
     }
 }
 ```
 
-## Licensing & Support Options
+## Licensing & Support Available
 
-**IronWord** is a premium library with free trial licenses available [here](https://ironsoftware.com/trial-license).
+**IronWord** offers both paid licenses and free trial options available on [this page](https://ironsoftware.com/csharp/ocr/trial-license).
 
-To learn more about Iron Software or for additional support, visit our official site: [Iron Software](https://ironsoftware.com/) or our [support team](https://ironsoftware.com/#live-chat-support).
+For more details about Iron Software, please visit our [website](https://ironsoftware.com/). For additional support, you can [reach out to our team](https://ironsoftware.com/csharp/ocr/#live-chat-support).
 
 ### Support from Iron Software
 
-For any general assistance or technical queries, kindly contact us at: <support@ironsoftware.com>
+For general inquiries and technical assistance, reach out to us via email: <support@ironsoftware.com>

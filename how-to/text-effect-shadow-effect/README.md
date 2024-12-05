@@ -1,13 +1,13 @@
-# How to Implement a Shadow Effect on Text
+# Applying Shadow Effects to Text in .NET
 
 ***Based on <https://ironsoftware.com/how-to/text-effect-shadow-effect/>***
 
 
-Adding a shadow to text is an effective way to give it depth and make it stand out. This technique involves creating a slightly offset duplicate of the original text behind it, known as the shadow, which helps to achieve a visually engaging effect. This shadow can be finely tuned through various parameters to suit specific design needs.
+Shadow effects on text create a visual depth that can help text elements stand out on a page. By rendering a shadow, you essentially duplicate the original text as a backdrop with a slight positional offset, thereby manifesting as a shadow that can be styled in many ways.
 
-## Implementing a Shadow Effect
+## Implementing Shadow Effect
 
-To apply a shadow effect to text, you first need to instantiate a `TextStyle` object and set its `ShadowEffect` property to a new `Shadow` object. Then, apply this style to the text by setting the `TextStyle` object to the `TextEffect` property of the text element.
+To implement a shadow effect in your text, first construct a `TextStyle` object and assign a `Shadow` object to its `ShadowEffect` property. Next, apply this style to your text through the `TextEffect` property on a new text element.
 
 ```cs
 using IronWord.Models;
@@ -18,20 +18,20 @@ namespace ironword.TextEffectShadowEffect
     {
         public void Run()
         {
-            // Initialize a new document for text
+            // Initialize a new Word document
             WordDocument doc = new WordDocument();
             
-            // Configure the text style
+            // Configure text style with shadow
             TextStyle textStyle = new TextStyle();
             textStyle.TextEffect = new TextEffect()
             {
                 ShadowEffect = Shadow.OuterShadow1,
             };
             
-            // Assign the styled text
+            // Applying styled text
             doc.AddText("Hello World").Style = textStyle;
             
-            // Save the document with the new style
+            // Save the document with shadow effects
             doc.SaveAs("shadowEffect.docx");
         }
     }
@@ -46,17 +46,17 @@ namespace ironword.TextEffectShadowEffect
 
 ## Configuring Shadow Effect Properties
 
-The shadow effect offers several adjustable properties to customize its appearance. These properties let you tweak everything from the shadow's alignment and blurriness to its skew angles and color. Below is a listing of these properties along with their respective descriptions:
+The shadow effect is highly customizable through its various properties. Each property allows you to tweak the appearance and behavior of the shadow in various ways:
 
-- **Alignment**: Controls where the shadow is positioned relative to the text.
-- **BlurRadius**: Sets the blurring effect's radius, in points, for a softer shadow.
-- **DirectionAngle**: Defines the angle of the shadow's direction in degrees.
-- **DistanceFromText**: Specifies how far the shadow extends from the text, measured in points.
-- **HorizontalScalingFactor**: Adjusts the width of the shadow relative to the text.
-- **HorizontalSkewAngle**: Alters the horizontal skewing of the shadow's angle in degrees.
-- **SchemeColor**: Determines the color of the shadow.
-- **VerticalScalingFactor**: Adjusts the height of the shadow relative to the text.
-- **VerticalSkewAngle**: Alters the vertical skewing of the shadow's angle in degrees.
+- **Alignment**: Determines where the shadow is positioned relative to the text.
+- **BlurRadius**: Adjusts the softness of the shadow's edges, defined in points (1/72 inch).
+- **DirectionAngle**: Sets the angular direction of the shadow in degrees.
+- **DistanceFromText**: Specifies how far the shadow is from the text, in points.
+- **HorizontalScalingFactor**: Adjusts the width scaling of the shadow.
+- **HorizontalSkewAngle**: Tilts the shadow horizontally by specified degrees.
+- **SchemeColor**: Sets the color of the shadow.
+- **VerticalScalingFactor**: Adjusts the height scaling of the shadow.
+- **VerticalSkewAngle**: Tilts the shadow vertically by specified degrees.
 
 ```cs
 using IronWord.Models.Enums;
@@ -67,10 +67,10 @@ namespace ironword.TextEffectShadowEffect
     {
         public void Run()
         {
-            // Start a new document
+            // Initialize a new Word document
             WordDocument doc = new WordDocument();
             
-            // Detailed text styling
+            // Configuring text style with advanced shadow settings
             TextStyle textStyle = new TextStyle();
             textStyle.TextEffect = new TextEffect()
             {
@@ -88,8 +88,10 @@ namespace ironword.TextEffectShadowEffect
                 },
             };
             
-            // Applying custom shadow and saving
+            // Applying the custom styled text
             doc.AddText("Customized shadow").Style = textStyle;
+            
+            // Save the customized document
             doc.SaveAs("customizedShadowEffect.docx");
         }
     }

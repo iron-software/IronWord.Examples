@@ -1,0 +1,3 @@
+***Based on <https://ironsoftware.com/examples/log-object-tree/>***
+
+Logging the object hierarchy while assembling a Word document equips developers with crucial debugging tools and verification mechanisms. This process allows for swift identification and correction of any discrepancies or mistakes in the document's composition. Examining the object hierarchy is also instrumental in enhancing performance, as it helps developers pinpoint and eliminate inefficiencies during the document construction phase. In essence, logging the object hierarchy facilitates a smooth development process, resulting in the efficient production of superior Word documents.

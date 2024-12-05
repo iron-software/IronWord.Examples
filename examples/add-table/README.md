@@ -1,0 +1,5 @@
+***Based on <https://ironsoftware.com/examples/add-table/>***
+
+A table consists of a grid layout with cells positioned in rows and columns, making it an essential tool for organizing and displaying data clearly. Each point where a row and a column intersect is known as a cell. Tables are versatile, widely used for drafting timetables, arranging information, and presenting it in a tidy format.
+
+To incorporate a table using IronWord, you begin by creating a table instance specifying the desired number of rows and columns. This setup allows for complete customization of the table’s appearance. You can easily modify each cell by referencing it using the `[row, column]` notation. This enables individualized styling of cells and the inclusion of different elements such as `TextRun`, `Paragraph`, `Image`, and `Shape`. After configuring the table accordingly, it’s ready to be embedded into a new Word document.

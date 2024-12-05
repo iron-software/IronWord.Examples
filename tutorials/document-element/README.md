@@ -1,33 +1,32 @@
-# Word Document Element Guide
+# Document Element Guideline
 
 ***Based on <https://ironsoftware.com/tutorials/document-element/>***
 
 
-IronWord is an exceptional library tailored for .NET C# developers, facilitating the integration of Word and DOCX document manipulation capabilities into their applications. Document elements serve as the core components in constructing the content of a Word document.
+IronWord offers a robust library ideal for .NET C# developers looking to embed functionality for creating, reading, and editing Word and DOCX documents within their applications. Within a Word document, document elements form the foundational components that comprise the content.
 
 ## Table of Contents
 
-- **Manipulating TextRun Elements**
-  - [Working with Text Content](#anchor-text-content) (Adding, Appending & Splitting)
-  - [Applying Styling Options](#anchor-set-styling) (Changing Font, Size, Color, Bold, Italic, Strikethrough, Underline, Superscript & Subscript)
-  - [Inserting Images](#anchor-embed-images)
-- **Incorporating Images**
-  - [Loading Images](#anchor-load-image) (From File & FileStream)
-  - [Adjusting Text Wrapping](#anchor-configure-image)
-  - [Modifying Dimensions](#anchor-configure-image) (Specify Width & Height)
-  - [Altering Positioning](#anchor-configure-image)
-  - [Setting Margins](#anchor-configure-image)
+- **Manipulate TextRuns**
+  - [Text Manipulation](#anchor-text-content) (Create, Extend & Divide)
+  - [Apply Styles](#anchor-set-styling) (Font Settings, Colors, Formatting options like Bold & Italic)
+  - [Insert Images](#anchor-embed-images)
+- **Manage Images**
+  - [Import Image](#anchor-load-image) (File & FileStream Access)
+  - [Text Wrapping Options](#anchor-configure-image)
+  - [Adjust Size](#anchor-configure-image) (Set Width & Height)
+  - [Position Adjustment](#anchor-configure-image)
+  - [Margin Settings](#anchor-configure-image)
 
-## Manipulating TextRun Elements
+## Manipulate TextRuns
 
-### Working with Text Content
+### Text Manipulation
 
-To facilitate the organization and management of text, the `Split` method splits a TextRun into multiple smaller TextRuns using a specific delimiter.
+The `Split` method is applied to fragment a text run into several smaller TextRuns, employing a particular delimiter. This facilitates structured and adjustable text management within the document.
 
 ```cs
 using IronWord.Models;
 using IronWord;
-
 namespace ironword.DocumentElement
 {
     public class Section1
@@ -36,186 +35,178 @@ namespace ironword.DocumentElement
         {
             WordDocument doc = new WordDocument();
             
-            // Create text
-            Text newText = new Text("Create using IronWord");
+            // Creating text
+            Text newText = new Text("Incorporate text with IronWord");
             doc.AddParagraph(new Paragraph(newText));
             
-            // Append additional text
-            Text additionalText = new Text("Initial text.");
-            additionalText.Append(new Text("Further appended text."));
-            doc.AddParagraph(new Paragraph(additionalText));
+            // Extending text
+            Text extendText = new Text("Initial text.");
+            extendText.Append(new Text("Additional text."));
+            doc.AddParagraph(new Paragraph(extendText));
             
-            // Splitting text
-            Text textForSplitting = new Text("Demonstrate text splitting with IronWord.");
-            textForSplitting.Split(" ");
-            doc.AddParagraph(new Paragraph(textForSplitting));
+            // Dividing text
+            Text divideText = new Text("Dividing this sentence using the split method.");
+            divideText.Split(" ");
+            doc.AddParagraph(new Paragraph(divideText));
             
-            // Save document
-            doc.SaveAs("textManipulation.docx");
+            // Save the document
+            doc.SaveAs("manipulated-text.docx");
         }
     }
 }
 ```
 
-### Applying Styling Options
+### Apply Styles
 
-Text styling options in TextRuns allow for the adjustment of visual aspects like font size, color, and formatting to elevate the document's aesthetic appeal.
+Applying styles to TextRuns allows for the adjustment of visual elements of text such as font properties, color, and styling options like boldness, italics, as well as text formatting features like underline and strikethrough.
 
 ```cs
 using IronWord.Models.Enums;
 using IronWord;
-
 namespace ironword.DocumentElement
 {
     public class Section2
     {
         public void Run()
         {
-            // Open document
-            WordDocument doc = new WordDocument("styledDocument.docx");
+            WordDocument doc = new WordDocument("styled-doc.docx");
             
-            // Styling the text
+            // Set up text style
             Text styledText = new Text();
-            styledText.Text = "Styling text with IronWord";
+            styledText.Text = "Styling with IronWord";
             styledText.Style = new TextStyle()
             {
                 TextFont = new Font()
                 {
-                    FontFamily = "Montserrat",
+                    FontFamily = "Times New Roman",
                     FontSize = 48,
                 },
                 Color = Color.Blue,
                 IsBold = true,
                 IsItalic = false,
                 Underline = new Underline(),
-                Strike = StrikeValue.NoStrike,
+                Strike = StrikeValue.None,
             };
             
             Paragraph paragraph = new Paragraph();
             
-            // Adding styled text
+            // Include styled text
             paragraph.AddText(styledText);
             
-            // Including the paragraph
+            // Append paragraph
             doc.AddParagraph(paragraph);
             
-            // Save the styled document
-            doc.SaveAs("styledOutput.docx");
+            // Output the document
+            doc.SaveAs("styled-output.docx");
         }
     }
 }
 ```
 
-### Inserting Images
+### Insert Images
 
-Incorporate images into documents to enhance visual interactivity and convey information more effectively.
+Facilitate the incorporation of images within your content to enhance visual attractiveness and communication effectiveness of your document.
 
 ```cs
 using IronWord.Models;
 using IronWord;
-
 namespace ironword.DocumentElement
 {
     public class Section3
     {
         public void Run()
         {
-            // Initialize document
             WordDocument doc = new WordDocument();
             
-            // Setup image
-            IronWord.Models.Image detailedImage = new IronWord.Models.Image("image.jpg");
-            detailedImage.Width = 250; // Pixel units
-            detailedImage.Height = 250; // Pixel units
-            Text imageCaption = new Text();
+            // Prepare image
+            IronWord.Models.Image newImage = new IronWord.Models.Image("image.jpg");
+            newImage.Width = 300; // Size in pixels
+            newImage.Height = 300; // Size in pixels
+            Text imageText = new Text();
             
-            // Embed image
-            Paragraph imageParagraph = new Paragraph(imageCaption);
-            imageParagraph.AddImage(detailedImage);
+            // Incorporate image
+            Paragraph para = new Paragraph(imageText);
+            para.AddImage(newImage);
             
-            // Append image with caption
-            doc.AddParagraph(new Paragraph(imageCaption));
+            // Include paragraph
+            doc.AddParagraph(new Paragraph(imageText));
             
-            // Finalize document
-            doc.SaveAs("documentWithImages.docx");
+            // Document export
+            doc.SaveAs("image-inclusion.docx");
         }
     }
 }
 ```
 
-## Incorporating Images
+## Manage Images
 
-### Loading Images
+### Import Image
 
-The process of loading images involves importing them into the document, which is essential for enriching the content with relevant visuals.
+Importing images is critical for integrating visual elements into your documents. This functionality enhances the display and enriches the content of your documents.
 
 ```cs
 using IronWord.Models;
 using IronWord;
-
 namespace ironword.DocumentElement
 {
     public class Section4
     {
         public void Run()
         {
-            // Open new document
             WordDocument doc = new WordDocument();
             
-            Paragraph imgParagraph = new Paragraph();
+            Paragraph paragraph = new Paragraph();
             
             // Include image
-            imgParagraph.AddImage("image.jpg");
+            paragraph.AddImage("image.jpg");
             
-            // Insert into document
-            doc.AddParagraph(imgParagraph);
+            // Append paragraph
+            doc.AddParagraph(paragraph);
             
-            // Save the document with image
-            doc.SaveAs("imageLoadedDocument.docx");
+            // Document output
+            doc.SaveAs("imported-image.docx");
         }
     }
 }
 ```
 
-### Configuring Image Properties
+### Configure Image
 
-Adjust image settings such as wrap style, dimensions, positioning, and margins to ensure they fit within the document context suitably.
+Adjust images with configurable settings including text wrapping, dimensions, and positioning, ensuring they fit well within the context of the document.
 
 ```cs
 using IronWord.Models.Enums;
 using IronWord;
-
 namespace ironword.DocumentElement
 {
     public class Section5
     {
         public void Run()
         {
-            // Initialize new document
             WordDocument doc = new WordDocument();
             
-            // Set up the image
+            // Set image properties
             IronWord.Models.Image configuredImage = new IronWord.Models.Image("image.jpg");
-            configuredImage.WrapText = WrapText.Tight;
+            configuredImage.WrapText = WrapText.Square;
             configuredImage.Width = 150;
             configuredImage.Height = 150;
-            configuredImage.DistanceFromTop = 30;
+            configuredImage.DistanceFromTop = 60;
             
-            var imagePosition = new ElementPosition();
-            imagePosition.X = 30;
-            imagePosition.Y = 30;
-            configuredImage.Position = imagePosition;
+            var position = new ElementPosition();
+            position.X = 60;
+            position.Y = 60;
+            configuredImage.Position = position;
             
-            Paragraph imgParagraph = new Paragraph();
+            Paragraph paragraph = new Paragraph();
             
-            // Embed configured image
-            imgParagraph.AddImage(configuredImage);
+            // Add configured image
+            paragraph.AddImage(configuredImage);
             
-            // Add the configured paragraph
-            doc.AddParagraph(imgParagraph);
+            // Append paragraph
+            doc.AddParagraph(paragraph);
             
-            // Document saving
-            doc.SaveAs("configuredImagedDocument.docx");
+            // Save the configured document
+            doc.SaveAs("configured-image.docx");
         }
     }
 }

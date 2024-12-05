@@ -1,42 +1,42 @@
-# How to Apply a Glow Effect to Text
+# Applying a Glow Effect to Text
 
 ***Based on <https://ironsoftware.com/how-to/text-effect-glow-effect/>***
 
 
-A glow effect on text surrounds the letters with a luminous halo, making them seem to emit light. This soft radiant outline can improve visibility and draw the viewer's attention, enriching the text's impact.
+A glow effect around text consists of a glowing halo surrounding the characters, making it appear as if they are emitting light. This soft, luminous outline not only makes your text stand out but can also enhance its readability by drawing the viewer's attention.
 
-## Applying a Glow Effect
+## Implementing a Glow Effect
 
-To apply the glow effect to text, begin by setting up a **Glow** object. Next, create a **TextEffect** object using the earlier configured Glow object, and assign this to the **TextEffect** property of your text element.
+Begin by establishing a **Glow** object and configuring it for use. Subsequently, create a **TextEffect** object using the previously configured Glow object. This TextEffect must also be set to the **TextEffect** property of the desired text.
 
 ```cs
 using IronWord.Models;
 using IronWord;
 namespace ironword.TextEffectGlowEffect
 {
-    public class ApplyGlowEffect
+    public class Section1
     {
-        public void Execute()
+        public void Run()
         {
             // Initialize a new Word document
-            WordDocument document = new WordDocument();
+            WordDocument doc = new WordDocument();
             
-            // Configure the text style with glow effect
-            TextStyle style = new TextStyle();
-            style.TextEffect = new TextEffect()
+            // Define a new text style
+            TextStyle textStyle = new TextStyle();
+            textStyle.TextEffect = new TextEffect()
             {
                 GlowEffect = new Glow()
                 {
                     GlowColor = IronWord.Models.Color.Aqua,
-                    GlowRadius = 10,
+                    GlowRadius = 10, // Set radius to 10 points
                 },
             };
             
-            // Apply the style to text
-            document.AddText("Hello World").Style = style;
+            // Apply the styled text to the document
+            doc.AddText("Hello World").Style = textStyle;
             
-            // Save the document with glow effect
-            document.SaveAs("glowEffect.docx");
+            // Save the document with the new style
+            doc.SaveAs("glowEffect.docx");
         }
     }
 }
@@ -44,23 +44,23 @@ namespace ironword.TextEffectGlowEffect
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://www.ironsoftware.com/static-assets/word/how-to/text-effect-glow-effect/glow-effect.webp" alt="Apply glow effect" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-glow-effect/glow-effect.webp" alt="Add glow effect" class="img-responsive add-shadow">
     </div>
 </div>
 
 ## Properties of the Glow Effect
 
-Here are the properties associated with the glow effect and what they signify:
+The following are details on the properties related to the glow effect:
 
-- **GlowRadius**: Defines the radius of the glow surrounding the text, measured in points (1/72 inch).
-- **GlowColor**: Specifies the color of the glow effect around the text.
+- **GlowRadius**: Determines the radius of the glow effect, expressed in points (1/72 inch).
+- **GlowColor**: Specifies the shade for the glow effect.
 
-## Examples of Glow Effects
+## Additional Examples of Glow Effects
 
-We can further explore glow effects by using ARGB (Alpha, Red, Green, Blue) values which include an alpha component that controls opacity.
+Here are more instances to showcase how flexible the glow effect can be, including the use of ARGB values in setting the color. The 'alpha' value indicates the opacity of the color.
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://www.ironsoftware.com/static-assets/word/how-to/text-effect-glow-effect/glow-effect-examples.webp" alt="Examples of glow effect" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-glow-effect/glow-effect-examples.webp" alt="Glow effect examples" class="img-responsive add-shadow">
     </div>
 </div

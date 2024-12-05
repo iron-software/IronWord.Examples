@@ -1,39 +1,38 @@
-# Enhancing Text with Gradient Effects
+# How to Apply Gradient Effects to Text
 
 ***Based on <https://ironsoftware.com/how-to/text-effect-gradient-effect/>***
 
 
-Applying a gradient effect to text means transitioning smoothly between colors over the text characters or its background, creating visually striking blends. These effects can introduce depth and vibrancy, making the text more engaging and visually appealing. Gradients can be linear, changing along a straight line, or radial, expanding from the center outward.
+Applying a gradient effect to text means creating a seamless blend from one color to another—or several colors—across text characters or backgrounds. This technique introduces depth, attractiveness, and a dynamic flair, enhancing the visual appeal and making text more prominent. There are two types of gradient effects: linear, where the color transition follows a straight line, and radial, where colors radiate from a center point outward.
 
 ## Implementing Gradient Effects
 
-To implement a gradient effect on text, you'll begin by creating a `TextStyle` object and setting up the `GradientEffect` property with a `Gradient` object. Hereafter, any new text added will retain this style through the `TextEffect` property of the `TextStyle`.
+To apply a gradient effect, you must first create a **TextStyle** object and set its GradientEffect property with a **Gradient** object. You then apply this style when adding new text by setting the TextStyle object to the TextEffect property.
 
 ```cs
 using IronWord.Models;
 using IronWord;
-
 namespace ironword.TextEffectGradientEffect
 {
-    public class ExampleSection
+    public class Section1
     {
-        public void Execute()
+        public void Run()
         {
-            // Initialize a new Word document
-            WordDocument document = new WordDocument();
+            // Instantiate a new Word document
+            WordDocument doc = new WordDocument();
             
-            // Configure the text style with gradient
-            TextStyle style = new TextStyle();
-            style.TextEffect = new TextEffect()
+            // Configure a TextStyle for gradient
+            TextStyle textStyle = new TextStyle();
+            textStyle.TextEffect = new TextEffect()
             {
                 GradientEffect = Gradient.DefaultGray,
             };
             
-            // Add styled text
-            document.AddText("Hello World").Style = style;
+            // Apply style to newly added text
+            doc.AddText("Hello World").Style = textStyle;
             
-            // Save the document with text having gradient effect
-            document.SaveAs("gradientEffect.docx");
+            // Save the document with gradient effect
+            doc.SaveAs("gradientEffect.docx");
         }
     }
 }
@@ -41,65 +40,66 @@ namespace ironword.TextEffectGradientEffect
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-gradient-effect/gradient-effect.webp" alt="Gradient effect example" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-gradient-effect/gradient-effect.webp" alt="Add gradient effect" class="img-responsive add-shadow">
     </div>
 </div>
 
-## Properties of Gradient Effect
+## Gradient Effect Attributes
 
-Gradient effects offer various properties that can be tailored to fit different design needs. Below you can see a detailed rundown of these properties:
+Gradient effects come with versatile properties, allowing customization to fit specific design needs. Below is an explanation of some key properties:
 
 **GradientStop**
-- **Color**: Determines the color at this point in the gradient.
-- **StopPoint**: Indicates at what point along the gradient path this color appears.
+- **Color**: Sets or retrieves the color at a gradient stop.
+- **StopPoint**: Defines the position where this color stops.
+
+A gradient stop is a point in the gradient where the color is defined.
 
 **Gradient**
-- **StopPoints**: A collection of `GradientStop` objects that outline the gradient.
-- **LinearShadeScaled**: Indicates if the linear gradient scales with the object.
-- **LinearShadeAngle**: Determines the angle at which the linear gradient is applied.
+- **StopPoints**: Manages a collection of gradient stops defining the gradient trajectory.
+- **LinearShadeScaled**: Indicates if the linear shade is adjusted to scale.
+- **LinearShadeAngle**: Specifies the angle of the linear gradient shading.
 
 ```cs
 using System.Collections.Generic;
 using IronWord;
-
 namespace ironword.TextEffectGradientEffect
 {
-    public class ExampleSection2
+    public class Section2
     {
-        public void Execute()
+        public void Run()
         {
-            // Initialize a new Word document
-            WordDocument document = new WordDocument();
+            // Create a new Word document
+            WordDocument doc = new WordDocument();
             
             // Define gradient stops
-            GradientStop start = new GradientStop()
+            GradientStop firstGradientStop = new GradientStop()
             {
                 Color = IronWord.Models.Color.Aqua,
                 StopPoint = 1
             };
-            GradientStop end = new GradientStop()
+            GradientStop secondGradientStop = new GradientStop()
             {
                 Color = IronWord.Models.Color.OrangeRed,
                 StopPoint = 10
             };
             
-            // Configure the text style with multiple gradient stops
-            TextStyle style = new TextStyle();
-            style.TextEffect = new TextEffect()
+            // Configure TextStyle for gradient
+            TextStyle textStyle = new TextStyle();
+            textStyle.TextEffect = new TextEffect()
             {
                 GradientEffect = new Gradient()
                 {
-                    StopPoints = new List<GradientStop> { start, end },
+                    StopPoints = new List<GradientStop> { firstGradientStop, secondGradientStop },
                     LinearShadeAngle = 45,
                     LinearShadeScaled = true,
                 }
             };
             
-            // Add styled text
-            document.AddText("Hello World").Style = style;
+            // Apply gradient styled text
+            doc.AddText("Hello World").Style = textStyle;
             
-            // Save the document
-            document.SaveAs("customizedGradientEffect.docx");
+            // Export the document with custom gradient settings
+            doc.SaveAs("customizedGradientEffect.docx");
         }
     }
 }

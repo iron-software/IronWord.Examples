@@ -1,0 +1,5 @@
+***Based on <https://ironsoftware.com/examples/add-text-effect-glow-effect/>***
+
+The provided code example shows how to generate a new Word document and incorporate a glow effect on the text. Initially, a Word document is created and assigned to the `doc` variable. Subsequently, a new **TextStyle** object, labeled `textStyle`, is formulated. This text style introduces a glow effect by initiating a TextEffect object incorporating specific configurations. The phrase "Hello World" is then added to the document, and the `textStyle` with the glow effect is applied to it. At the end, the modified Word document is saved as a new file.
+
+For additional examples and insights, please refer to the article: [How to Add Glow Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-glow-effect/).
