@@ -3,99 +3,88 @@
 ***Based on <https://ironsoftware.com/how-to/text-effect-text-outline-effect/>***
 
 
-Adding an outline effect to text introduces a distinct border around each character, significantly enhancing the visual definition and readability. This effect may be tailored in color, thickness, and style to meet specific design requirements. It’s particularly favored in various design disciplines such as graphics, typography, and digital layout to emphasize text over diverse backgrounds or to craft a distinct stylized look.
+An outline effect around text provides a distinct border that outlines each character, enhancing both readability and visual appeal. This stylistic feature can be tailored in color, width, and style to fit various design preferences and is widely used in digital graphics, typography, and digital design to ensure text pops on various backgrounds or to achieve a particular stylistic look.
 
-## Implementing Text Outline Effect
+<h3>Getting Started with IronWord</h3>
 
-To apply an outline effect, begin by initializing a **TextStyle** object and setting its `TextOutlineEffect` property with a new **TextOutlineEffect** instance. After configuring the desired style, apply it to your text by linking the **TextStyle** object to the `TextEffect` property.
+------------------
+
+## Applying a Text Outline Effect
+
+To implement an outline effect on text, begin by initializing a `TextStyle` object. Set up the `TextEffect` property of this object using a `TextOutlineEffect` instance. Once the style is configured, apply it to any new text by linking the `TextStyle` object to the `TextEffect` attribute.
 
 ```cs
+using IronWord;
 using IronWord.Models;
-using IronWord;
-namespace ironword.TextEffectTextOutlineEffect
+
+// Initialize a new Word document
+WordDocument document = new WordDocument();
+
+// Configure the text style with outline effect
+TextStyle textStyling = new TextStyle();
+textStyling.TextEffect = new TextEffect()
 {
-    public class Section1
-    {
-        public void ApplyOutlineEffect()
-        {
-            // Initialize a new Word document
-            WordDocument document = new WordDocument();
-            
-            // Configure the text style
-            TextStyle style = new TextStyle();
-            style.TextEffect = new TextEffect()
-            {
-                TextOutlineEffect = TextOutlineEffect.DefaultEffect,
-            };
-            
-            // Assign style to text
-            document.AddText("Hello World").Style = style;
-            
-            // Save the styled document
-            document.SaveAs("textOutlineEffect.docx");
-        }
-    }
-}
+    TextOutlineEffect = TextOutlineEffect.DefaultEffect,
+};
+
+// Apply styled text to the document
+document.AddText("Hello World").Style = textStyling;
+
+// Save the document with outline effects
+document.SaveAs("StyledTextOutline.docx");
 ```
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/text-outline-effect.webp" alt="Add text outline effect" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/text-outline-effect.webp" alt="Text outline effect showcase" class="img-responsive add-shadow">
     </div>
 </div>
 
-## Properties of the Text Outline Effect
+## Text Outline Effect Configuration Options
 
-The text outline effect can be customized with several properties, each catering to different design requirements. Below are some of the key properties and their purposes:
+Below are several properties available for customizing text outline effects to meet specific design requirements:
 
-- **PenAlignment**: Determines the alignment of the pen for the outline.
-- **LineCapType**: Specifies the cap style at the end of the outline.
-- **LineWidth**: Defines the thickness of the outline in points (1/72 inch).
-- **CompoundLineType**: The type of compound line style for the outline.
-- **LineJoin**: Controls the interaction of connected lines.
-- **Color**: Sets the color of the outline.
-- **presetLineDash**: Chooses a predefined dash style for the outline.
+- **PenAlignment**: Defines the alignment of the outline pen.
+- **LineCapType**: Specifies the cap style at the end of lines.
+- **LineWidth**: Determines the thickness of the outline (measured in points, where 1 point equals 1/72 inch).
+- **CompoundLineType**: Sets the compound line style.
+- **LineJoin**: Configures the join style between stroke segments.
+- **Color**: Assigns the color of the outline.
+- **presetLineDash**: Applies a preset dash pattern.
 
 ```cs
-using IronWord.Models.Enums;
 using IronWord;
-namespace ironword.TextEffectTextOutlineEffect
+using IronWord.Models;
+using IronWord.Models.Enums;
+
+// Initiate a new Word document
+WordDocument document = new WordDocument();
+
+// Set up text style with specific outline properties
+TextStyle textStyling = new TextStyle();
+textStyling.TextEffect = new TextEffect()
 {
-    public class Section2
+    TextOutlineEffect = new TextOutlineEffect()
     {
-        public void CustomizeOutlineEffect()
-        {
-            // Instantiate a new Word document
-            WordDocument document = new WordDocument();
-            
-            // Define custom text style
-            TextStyle style = new TextStyle();
-            style.TextEffect = new TextEffect()
-            {
-                TextOutlineEffect = new TextOutlineEffect()
-                {
-                    Color = IronWord.Models.Color.Red,
-                    CompoundLineType = CompoundLineValues.Double,
-                    LineCapType = LineCapValues.Round,
-                    LineJoin = StrokeJoinStyleValues.Bevel,
-                    LineWidth = 0.3,
-                    PenAlignment = PenAlignmentValues.Center,
-                    presetLineDash = PresetLineDashValues.Solid
-                },
-            };
-            
-            // Apply custom style to text
-            document.AddText("Customized text outline").Style = style;
-            
-            // Save the document
-            document.SaveAs("customizedTextOutlineEffect.docx");
-        }
-    }
-}
+        Color = IronWord.Models.Color.Red,
+        CompoundLineType = CompoundLineValues.Double,
+        LineCapType = LineCapValues.Round,
+        LineJoin = StrokeJoinStyleValues.Bevel,
+        LineWidth = 0.3,
+        PenAlignment = PenAlignmentValues.Center,
+        presetLineDash = PresetLineDashValues.Solid
+    },
+};
+
+// Attach the custom style to new text
+document.AddText("Outlined Text Example").Style = textStyling;
+
+// Output the finalized Word document
+document.SaveAs("DetailedTextOutlineEffect.docx");
 ```
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/customized-text-outline.webp" alt="Customized text outline effect" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/customized-text-outline.webp" alt="Detailed view of customized text outline effect" class="img-responsive add-shadow">
     </div>
-</div>
+</div

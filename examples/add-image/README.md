@@ -1,3 +1,3 @@
 ***Based on <https://ironsoftware.com/examples/add-image/>***
 
-The preceding code segment demonstrates how to open a Word document and set up an image with specified dimensions. It then goes on to create a new `Paragraph` instance, embedding the configured image through the `AddImage` method associated with the paragraph. This fully configured paragraph is then integrated into the document with the `AddParagraph` call. The document, now updated, is then saved or exported.
+The provided code snippet demonstrates how to load a Word document and set up an image with predefined dimensions. Following this, a new `Paragraph` object is created to house the image. The image is incorporated into the paragraph through the `AddImage` method. This paragraph, now embedded with the image, is then appended to the document using the `AddParagraph` method. Ultimately, the altered document is saved.

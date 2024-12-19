@@ -1,3 +1,7 @@
 ***Based on <https://ironsoftware.com/examples/add-style-text/>***
 
-The example demonstrates how to utilize the IronWord library for manipulating a DOCX file. It begins by loading a DOCX file into a `WordDocument` object. Following this, it introduces a `Text` element, applying several styles such as a particular font family and size, color (red), and diverse text effects. Subsequently, it forms a new `Paragraph` object, incorporates the formatted text into this paragraph, and integrates the paragraph into the `WordDocument`. The process concludes by saving the changes in a new document.
+Here's a paraphrased version of the provided article, with adjusted markdown content and relative URL paths resolved to `ironsoftware.com`:
+
+---
+
+This segment demonstrates the application of IronWord, an Iron Software library, to edit a DOCX file. Initially, the existing document is imported into an instance of the `WordDocument` class. Subsequently, it proceeds to insert a Text element, configuring multiple attributes such as font style, font size, color (specifically red), and various text effects. Following this, a new `Paragraph` object is instantiated and the pre-styled text is incorporated into this paragraph. This paragraph is then appended to the main body of the Word document. To finalize, the document is saved as a newly transformed file.

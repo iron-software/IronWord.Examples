@@ -1,3 +1,3 @@
 ***Based on <https://ironsoftware.com/examples/edit-text/>***
 
-Modify text within a pre-existing Word document using IronWord by navigating through the document structure and updating its content. The given code sample demonstrates how to locate a `TextRun` in the initial paragraph. It then updates the `TextRun` content to "This is the edited text." This modification targets solely the text itself, preserving any existing formatting associated with that `TextRun`.
+Modify text within an existing Word document utilizing IronWord by navigating the document structure to identify and update the text. The provided code sample demonstrates accessing a `TextRun` in the first paragraph and updating its content to "This is the edited text." This modification exclusively updates the text, preserving any existing styles associated with the `TextRun`.

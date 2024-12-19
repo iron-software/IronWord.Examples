@@ -1,3 +1,3 @@
 ***Based on <https://ironsoftware.com/examples/remove-text/>***
 
-To delete certain text within a document, you should locate the appropriate segment, such as a paragraph. Proceed by utilizing the `RemoveTextRun` method, which involves passing the specific `TextRun` object you wish to eliminate. If you need to delete the whole paragraph, simply access it and apply the `Remove` method.
+Text can exist in various sections of a document, like paragraphs or tables. To delete particular text, locate it in the paragraph and employ the `RemoveTextRun` method, where you pass the specific `TextRun` object for removal. Additionally, if you need to eliminate an entire paragraph, simply access that paragraph and execute the `Remove` method.

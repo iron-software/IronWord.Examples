@@ -1,5 +1,5 @@
 ***Based on <https://ironsoftware.com/examples/add-text-effect-gradient-effect/>***
 
-The code snippet illustrated above shows the procedure for adding a gradient effect to text within a Word document. Initially, a fresh Word document is created. A **TextStyle** object is then initialized and set to utilize a gradient effect, specifically selecting the `Gradient.DefaultGray` preset for the **GradientEffect** property. This configured **TextStyle** is then applied to the phrase "Hello World," which is inserted into the document. To finalize, the document with the new styling is exported.
+The provided code snippet illustrates the process of adding a gradient effect to text within a Word document. Initially, a new Word document is created. Subsequently, a `TextStyle` object is initiated and it is set to utilize a gradient effect. This is achieved by assigning the `Gradient.DefaultGray` preset to the `GradientEffect` property of the `TextStyle`. After configuring the `TextStyle`, it is applied to the text "Hello World," which is subsequently included in the document. The document is then saved.
 
-For additional examples and tutorials, please refer to the article: [How to Add Gradient Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-gradient-effect/).
+For additional examples and detailed demonstrations, refer to this article: [How to Add Gradient Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-gradient-effect/).

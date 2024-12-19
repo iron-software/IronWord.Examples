@@ -1,10 +1,10 @@
 using IronWord.Models;
 using IronWord;
-namespace ironword.DocumentElement
+namespace IronWord.Examples.Tutorial.DocumentElement
 {
-    public class Section3
+    public static class Section3
     {
-        public void Run()
+        public static void Run()
         {
             // Load docx
             WordDocument doc = new WordDocument();

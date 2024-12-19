@@ -1,10 +1,10 @@
 using IronWord.Models.Enums;
 using IronWord;
-namespace ironword.TextEffectShadowEffect
+namespace IronWord.Examples.HowTo.TextEffectShadowEffect
 {
-    public class Section2
+    public static class Section2
     {
-        public void Run()
+        public static void Run()
         {
             // Create new Word document
             WordDocument doc = new WordDocument();

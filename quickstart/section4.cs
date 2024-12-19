@@ -1,10 +1,10 @@
 using IronWord.Models;
 using IronWord;
-namespace ironword.Quickstart
+namespace IronWord.Examples.Overview.Quickstart
 {
-    public class Section4
+    public static class Section4
     {
-        public void Run()
+        public static void Run()
         {
             // Create table cell
             TableCell cell = new TableCell();

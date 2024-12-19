@@ -1,10 +1,10 @@
 using IronWord.Models;
 using IronWord;
-namespace ironword.Quickstart
+namespace IronWord.Examples.Overview.Quickstart
 {
-    public class Section2
+    public static class Section2
     {
-        public void Run()
+        public static void Run()
         {
             // Create textrun
             Text textRun = new Text("Sample text");

@@ -1,9 +1,9 @@
 using IronWord;
-namespace ironword.LicenseKeys
+namespace IronWord.Examples.HowTo.LicenseKeys
 {
-    public class Section3
+    public static class Section3
     {
-        public void Run()
+        public static void Run()
         {
             // Check if a given license key string is valid
             bool valid = IronWord.License.IsValidLicense("IRONWORD.MYLICENSE.KEY.1EF01");

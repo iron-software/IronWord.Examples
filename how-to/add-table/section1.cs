@@ -1,10 +1,10 @@
 using IronWord.Models.Enums;
 using IronWord;
-namespace ironword.AddTable
+namespace IronWord.Examples.HowTo.AddTable
 {
-    public class Section1
+    public static class Section1
     {
-        public void Run()
+        public static void Run()
         {
             WordDocument doc = new WordDocument();
             

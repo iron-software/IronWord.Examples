@@ -1,45 +1,41 @@
-# Applying a Glow Effect to Text
+# How to Implement a Glow Effect on Text
 
 ***Based on <https://ironsoftware.com/how-to/text-effect-glow-effect/>***
 
 
-A glow effect around text consists of a glowing halo surrounding the characters, making it appear as if they are emitting light. This soft, luminous outline not only makes your text stand out but can also enhance its readability by drawing the viewer's attention.
+The glow effect on text produces a luminous halo around the letters, making them seem as though they are illuminated. This feature adds a soft radiance to the outline of the typeface, which not only boosts visibility but also captures interest.
+
+<h3>Introducing IronWord</h3>
+
+---
 
 ## Implementing a Glow Effect
 
-Begin by establishing a **Glow** object and configuring it for use. Subsequently, create a **TextEffect** object using the previously configured Glow object. This TextEffect must also be set to the **TextEffect** property of the desired text.
+To add a glow effect to your text, begin by establishing a **Glow** object. Next, use this to generate a **TextEffect** object. Apply this TextEffect to the **TextEffect** property of your text components.
 
 ```cs
-using IronWord.Models;
 using IronWord;
-namespace ironword.TextEffectGlowEffect
+using IronWord.Models;
+
+// Initialize a new Word document
+WordDocument document = new WordDocument();
+
+// Set up the text style
+TextStyle format = new TextStyle();
+format.TextEffect = new TextEffect()
 {
-    public class Section1
+    GlowEffect = new Glow()
     {
-        public void Run()
-        {
-            // Initialize a new Word document
-            WordDocument doc = new WordDocument();
-            
-            // Define a new text style
-            TextStyle textStyle = new TextStyle();
-            textStyle.TextEffect = new TextEffect()
-            {
-                GlowEffect = new Glow()
-                {
-                    GlowColor = IronWord.Models.Color.Aqua,
-                    GlowRadius = 10, // Set radius to 10 points
-                },
-            };
-            
-            // Apply the styled text to the document
-            doc.AddText("Hello World").Style = textStyle;
-            
-            // Save the document with the new style
-            doc.SaveAs("glowEffect.docx");
-        }
-    }
-}
+        GlowColor = IronWord.Models.Color.Aqua,
+        GlowRadius = 10, // Set the glow radius in points
+    },
+};
+
+// Insert styled text into the document
+document.AddText("Hello World").Style = format;
+
+// Save the document with glow effects
+document.SaveAs("glowEffect.docx");
 ```
 
 <div class="content-img-align-center">
@@ -50,17 +46,17 @@ namespace ironword.TextEffectGlowEffect
 
 ## Properties of the Glow Effect
 
-The following are details on the properties related to the glow effect:
+The primary properties of the glow effect include:
 
-- **GlowRadius**: Determines the radius of the glow effect, expressed in points (1/72 inch).
-- **GlowColor**: Specifies the shade for the glow effect.
+- **GlowRadius** : Determines how wide the radiant effect spreads, measured in points (1/72 inch).
+- **GlowColor** : Allows you to set the hue of the radiance emanating from the text.
 
-## Additional Examples of Glow Effects
+## Examples of Glow Effects
 
-Here are more instances to showcase how flexible the glow effect can be, including the use of ARGB values in setting the color. The 'alpha' value indicates the opacity of the color.
+Here are additional glow effect samples, where the glow can be specific in ARGB values, starting with an alpha value which dictates the transparency of the color.
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
          <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-glow-effect/glow-effect-examples.webp" alt="Glow effect examples" class="img-responsive add-shadow">
     </div>
-</div
+</div>

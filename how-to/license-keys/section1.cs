@@ -1,9 +1,9 @@
 using IronWord;
-namespace ironword.LicenseKeys
+namespace IronWord.Examples.HowTo.LicenseKeys
 {
-    public class Section1
+    public static class Section1
     {
-        public void Run()
+        public static void Run()
         {
             IronWord.License.LicenseKey = "IRONWORD.MYLICENSE.KEY.1EF01";
         }

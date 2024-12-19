@@ -1,95 +1,84 @@
-![Nuget](https://img.shields.io/nuget/v/IronWord?color=informational&label=latest)![Installs](https://img.shields.io/nuget/dt/IronWord?color=informational&label=installs&logo=nuget)![Passed](https://img.shields.io/badge/build-%20%E2%9C%93%20522%20tests%20passed%20(0%20failed)%20-107C10?logo=visualstudio)![windows](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=windows)![macOS](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=apple)![linux](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=linux&logoColor=white)![docker](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=docker&logoColor=white)![aws](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=amazonaws)![microsoftazure](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=microsoftazure)[![livechat](https://img.shields.io/badge/Live%20Chat:-24/5-purple?logo=googlechat&logoColor=white)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=topshield#helpscout-support)
+![Nuget Version](https://img.shields.io/nuget/v/IronWord?color=informational&label=latest) ![Installs](https://img.shields.io/nuget/dt/IronWord?color=informational&label=installs&logo=nuget) ![Build Status](https://img.shields.io/badge/build-%20%E2%9C%93%20522%20tests%20passed%20(0%20failed)%20-107C10?logo=visualstudio) ![Windows Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=windows) ![macOS Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=apple) ![Linux Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=linux&logoColor=white) ![Docker Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=docker&logoColor=white) ![AWS Compatibility](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=amazonaws) ![Microsoft Azure Compatibility](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=microsoftazure) [![Live Chat](https://img.shields.io/badge/Live%20Chat:-24/5-purple?logo=googlechat&logoColor=white)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=topshield#helpscout-support)
 
-## IronWord - The C# Word Library
+## IronWord - Your C# Word Processing Library
 
-[![IronWord NuGet Trial Banner Image](https://ironsoftware.com/csharp/word/nuget-trial-banner.png)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=topbanner#trial-license)
+[![IronWord NuGet Trial Banner Image](https://raw.githubusercontent.com/iron-software/iron-nuget-assets/main/IronWord-readme/nuget-trial-banner.png)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=topbanner#trial-license)
 
-IronWord, crafted by Iron Software, is a robust library empowering C# developers with tools to manipulate, create, and store Word documents in .NET applications and websites.
+IronWord is a robust tool developed by Iron Software that enhances C# developers' capabilities in creating, editing, and storing Word documents within .NET frameworks and websites.
 
-#### Key Functions of IronWord:
+#### Outstanding Features of IronWord:
 
-  * Manipulating, creating, and storing Word and DOCX files.
-  * PageSetup: Customizing paper size, page orientation, margins, and background color.
-  * TextRun: Managing text elements, styles, appending text, splitting, and integrating images.
-  * TextStyle: Overseeing font type, size, color, boldness, italics, strikethrough, underlining, superscript, and subscript functionalities.
-  * Paragraph: Incorporating text runs, images, shapes, aligning texts, and configuring bullets and numbering.
-  * Table: Adjusting tables by adding rows, setting cell content, removing rows, merging cells, etc.
-  * Image: Embedding images from files or streams, adjusting text wrapping, positioning, dimensions, and other characteristics.
-  * Shape: Modifying text wrapping, positioning, dimensions, type of shapes, and rotation.
+  * Comprehensive management of Word and DOCX files.
+  * PageSetup: Setting up page sizes, orientations, margins, and background colors.
+  * TextRun: Manipulating text by edging, fine-tuning styles, appending images, and more.
+  * TextStyle: Managing font type, size, colors, and text attributes like bold, italic, underline, etc.
+  * Paragraph: Assembling text runs, imagery, alignments, and sessioning lists and bullets.
+  * Table: Robust table constructions, with capabilities to add, modify, or merge table elements.
+  * Image: Integrating images with customization of dimensions and text wrapping.
+  * Shape: Inserting different shapes with adjustable text wrap, size, and rotation.
 
-Explore more! _Head to [our homepage](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featureslist) for [detailed code samples](https://ironsoftware.com/csharp/word/examples/add-text/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featureslist) and a [comprehensive features list](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featureslist)_
+Explore these and more on [our features page](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featureslist) and see our [extensive code library](https://ironsoftware.com/csharp/word/examples/add-text/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featureslist).
 
-#### Cross-Platform Compatibility of IronWord Includes:
+#### Cross-Platform Support From IronWord:
 
-  * **.NET 8**, .NET 7, .NET 6, and .NET 5, Core 2x & 3x, Standard 2, and Framework 4.6.2+
-  * Systems like Windows, macOS, Linux, Docker, Azure, and AWS
+IronWord supports a variety of environments and frameworks:
+  * **.NET 8**, .NET 7, .NET 6, .NET 5, Core 2x & 3x, Standard 2, and Framework 4.6.2+
+  * Compatible with Systems including Windows, macOS, Linux; and Deployable via Docker, Azure, and AWS
 
-[![IronWord Cross Platform Support Image](https://ironsoftware.com/csharp/word/cross-platform-compatibility.png)](https://ironsoftware.com/csharp/word/docs/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=crossplatformbanner)
+[![IronWord Cross Platform Support](https://raw.githubusercontent.com/iron-software/iron-nuget-assets/main/IronWord-readme/cross-platform-compatibility.png)](https://ironsoftware.com/csharp/word/docs/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=crossplatformbanner)
 
-Visit our site for the [API document reference](https://ironsoftware.com/csharp/word/object-reference/api/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs) and [information on licenses](https://ironsoftware.com/csharp/word/licensing/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs#trial-license).
+Click this link to access [API reference materials](https://ironsoftware.com/csharp/word/object-reference/api/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs) and [comprehensive licensing guidelines](https://ironsoftware.com/csharp/word/licensing/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs#trial-license).
 
-### How to Implement IronWord
+### Installing IronWord
 
-To initiate, install the IronWord NuGet package using the following command in your package manager console:
+To use IronWord in your project, initiate the installation with this command in your package manager console:
 
     PM> Install-Package IronWord
     
-When installed, incorporate `using IronWord;` at the start of your C# scripts. Below is an illustrative example to assist with opening, modifying, and storing a document:
+
+Then, incorporate these using statements at the beginning of your C# application:
 
     using IronWord;
     using IronWord.Models;
     using IronSoftware.Drawing;
     
-    // Load an existing Word document
-    var docxCurrent = new WordDocument("existing.docx");
+    // Create or load documents
+    var existingDoc = new WordDocument("existing.docx");  // Loading an existing document
     
-    // Or initiate a new Word document
-    var docxNew = new WordDocument();
+    var newDoc = new WordDocument();  // Creating a new document
     
-    // Creating a new paragraph with custom text
-    Paragraph newParagraph = new Paragraph();
-    var textContent = new Text()
-    {
-        Text = "Welcome to IronWord!"
-    };
-    newParagraph.AddText(textContent);
+    // Adding textual content
+    var textParagraph = new Paragraph();
+    textParagraph.AddText(new Text() { Text = "Hello IronWord!" });
+    existingDoc.AddParagraph(textParagraph);
     
-    docxCurrent.AddParagraph(newParagraph);
+    // Incorporating images
+    var img = new Image("example.jpg") { Width = 200, Height = 200 };
+    var imageParagraph = new Paragraph();
+    imageParagraph.AddImage(img);
     
-    // Including an image within a paragraph
-    Image newImage = new Image("example.jpg");
-    newImage.Width = 200;  // Specify width in pixels
-    newImage.Height = 200; // Specify height in pixels
+    existingDoc.AddParagraph(imageParagraph);
     
-    newParagraph = new Paragraph();
-    
-    // Add the image
-    newParagraph.AddImage(newImage);
-    
-    docxCurrent.AddParagraph(newParagraph);
-    
-    // Overwrite the existing document
-    docxCurrent.Save("existing.docx");
-    
-    // Alternatively, save as a new document
-    docxCurrent.SaveAs("output.docx");
+    // Saving documents
+    existingDoc.Save("updatedExisting.docx");  // Saving modifications
+    existingDoc.SaveAs("newDocument.docx");  // Saving as a new file
     
 
-### Feature Overview
+### Feature Summary
 
-[![IronWord Features](https://ironsoftware.com/csharp/word/features-table.png)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featuresbanner)
+[![IronWord Feature Overview](https://raw.githubusercontent.com/iron-software/iron-nuget-assets/main/IronWord-readme/features-table.png)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featuresbanner)
 
-### Licensing & Support
+### Comprehensive Support & Licensing
 
-Explore our extensive [code examples, tutorials, licensing details, and documentation](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs).
+For a full suite of code examples, licensing details, and documentation, make sure to visit us: [https://ironsoftware.com/csharp/word/](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
 
-For any assistance, contact us via email at: support@ironsoftware.com
+Contact us for support at: support@ironsoftware.com
 
 ### Helpful Documentation Links
 
-  * How-To Guides: [https://ironsoftware.com/csharp/word/how-to/](https://ironsoftware.com/csharp/word/how-to/html-file-to-pdf/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * API Examples: [https://ironsoftware.com/csharp/word/examples/](https://ironsoftware.com/csharp/word/examples/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * API Reference: [https://ironsoftware.com/csharp/word/object-reference/api/](https://ironsoftware.com/csharp/word/object-reference/api/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Tutorials: [https://ironsoftware.com/csharp/word/tutorials/](https://ironsoftware.com/csharp/word/tutorials/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Licensing Details: [https://ironsoftware.com/csharp/word/licensing/](https://ironsoftware.com/csharp/word/licensing/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Live Chat Support: [https://ironsoftware.com/csharp/word/#helpscout-support](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs#helpscout-support)
+  * Step-by-Step Guides: [https://ironsoftware.com/csharp/word/how-to/](https://ironsoftware.com/csharp/word/how-to/html-file-to-pdf/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
+  * Sample Code: [https://ironsoftware.com/csharp/word/examples/](https://ironsoftware.com/csharp/word/examples/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
+  * Complete API Reference: [https://ironsoftware.com/csharp/word/object-reference/api/](https://ironsoftware.com/csharp/word/object-reference/api/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
+  * Tutorial Portal: [https://ironsoftware.com/csharp/word/tutorials/](https://ironsoftware.com/csharp/word/tutorials/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
+  * Licensing Information: [https://ironsoftware.com/csharp/word/licensing/](https://ironsoftware.com/csharp/word/licensing/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
+  * Live Chat Assistance: [https://ironsoftware.com/csharp/word/#helpscout-support](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs#helpscout-support)

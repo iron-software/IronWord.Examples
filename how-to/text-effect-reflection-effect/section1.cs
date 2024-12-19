@@ -1,10 +1,10 @@
 using IronWord.Models;
 using IronWord;
-namespace ironword.TextEffectReflectionEffect
+namespace IronWord.Examples.HowTo.TextEffectReflectionEffect
 {
-    public class Section1
+    public static class Section1
     {
-        public void Run()
+        public static void Run()
         {
             // Create new Word document
             WordDocument doc = new WordDocument();

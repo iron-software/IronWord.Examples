@@ -1,5 +1,5 @@
 ***Based on <https://ironsoftware.com/examples/add-text-effect-shadow-effect/>***
 
-Adding a shadow effect to text in a Word document can be easily accomplished in just a few lines of code. To show this process from start to finish, we first initialize a new `WordDocument` instance named `doc`. Next, we create a `TextStyle` object and apply a shadow effect by setting the `Shadow.OuterShadow1` static named instance to the `TextEffect` property of this `TextStyle`. The phrase "Hello World" is then inserted into the document using the newly configured `textStyle`. To finish, the Word document is exported.
+Adding a shadow effect to text in a Word document can be easily achieved through a brief snippet of code. To begin, we must first set up a new `WordDocument` instance named `doc`. Following that, we create a `TextStyle` object and configure it to apply a shadow effect. This is done by setting its `TextEffect` property to `Shadow.OuterShadow1`, a pre-defined static instance. We then proceed to insert the text "Hello World" into the document with the newly configured `textStyle`. Finally, the document is exported.
 
-For additional examples and demonstrations, please refer to the following article: [How to Add Shadow Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-shadow-effect/).
+For additional examples and detailed walkthroughs, feel free to visit the following article: [How to Add Shadow Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-shadow-effect/).
