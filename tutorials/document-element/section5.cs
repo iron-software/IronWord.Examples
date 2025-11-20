@@ -1,4 +1,4 @@
-using IronWord.Models.Enums;
+using IronWord.Models;
 using IronWord;
 namespace IronWord.Examples.Tutorial.DocumentElement
 {
@@ -10,27 +10,20 @@ namespace IronWord.Examples.Tutorial.DocumentElement
             WordDocument doc = new WordDocument();
             
             // Configure image
-            IronWord.Models.Image image = new IronWord.Models.Image("image.jpg");
-            image.WrapText = WrapText.Square;
-            image.Width = 100;
-            image.Height = 100;
-            image.DistanceFromTop = 50;
-            
-            var position = new ElementPosition();
-            position.X = 50;
-            position.Y = 50;
-            image.Position = position;
-            
-            Paragraph paragraph = new Paragraph();
+            ImageContent image = new ImageContent("image.jpg");
+            image.Width = 200; // In unit pixel
+            image.Height = 200; // In unit pixel
+            TextContent textRun = new TextContent();
             
             // Add image
-            paragraph.AddImage(image);
+            Paragraph para = new Paragraph(textRun);
+            para.AddImage(image);
             
             // Add paragraph
-            doc.AddParagraph(paragraph);
+            doc.AddParagraph(new Paragraph(textRun));
             
             // Export docx
-            doc.SaveAs("document.docx");
+            doc.SaveAs("save_document.docx");
         }
     }
 }

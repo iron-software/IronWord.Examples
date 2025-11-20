@@ -1,5 +1,5 @@
 using IronWord;
-namespace IronWord.Examples.HowTo.LicenseKeys
+namespace IronWord.Examples.GettingStarted.LicenseKeys
 {
     public static class Section1
     {

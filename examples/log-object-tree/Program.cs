@@ -1,5 +1,6 @@
 ﻿using IronWord;
 using IronWord.Models;
+using System.Linq;
 
 WordDocument docx = new WordDocument("Table.docx");
 
@@ -7,4 +8,4 @@ WordDocument docx = new WordDocument("Table.docx");
 docx.LogObjectTree();
 
 // Log object tree of table 0
-docx.Tables[0].LogObjectTree();
+docx.Children.OfType<Table>().First().LogObjectTree();

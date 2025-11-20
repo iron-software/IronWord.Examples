@@ -1,68 +1,73 @@
-# How to Apply an Outline Effect to Text
+# Enhancing Text with an Outline Effect
 
 ***Based on <https://ironsoftware.com/how-to/text-effect-text-outline-effect/>***
 
 
-An outline effect around text provides a distinct border that outlines each character, enhancing both readability and visual appeal. This stylistic feature can be tailored in color, width, and style to fit various design preferences and is widely used in digital graphics, typography, and digital design to ensure text pops on various backgrounds or to achieve a particular stylistic look.
+The outline effect on text involves adding a distinct, visible border to each character. This effect is not only visually appealing but also enhances the legibility of text, especially against complex backgrounds. Users can tailor this effect by adjusting the color, width, and style of the outline to meet particular design requirements. This technique is widely used across graphic design, typography, and digital creation to give texts a prominent or artistic flair.
 
-<h3>Getting Started with IronWord</h3>
+### Instant Overview: Implementing a Standard Text Outline
 
-------------------
+Effortlessly append a standard outline to your text with IronWord by setting up a `TextStyle` object to utilize `TextOutlineEffect.DefaultEffect`. This method provides a straightforward approach for developers to enhance text appearance promptly.
 
-## Applying a Text Outline Effect
+```cs
+:title=Effortlessly Add Text Outline
+new IronWord.Models.TextStyle { TextEffect = new IronWord.Models.TextEffect { TextOutlineEffect = IronWord.Models.TextOutlineEffect.DefaultEffect } }
+```
 
-To implement an outline effect on text, begin by initializing a `TextStyle` object. Set up the `TextEffect` property of this object using a `TextOutlineEffect` instance. Once the style is configured, apply it to any new text by linking the `TextStyle` object to the `TextEffect` attribute.
+## Detailing Text Outline Customization
+
+To apply a specific outline effect, you first need to establish a `TextStyle` object and assign a `TextOutlineEffect`. This style is then applied to your text by setting the `TextStyle` via the `TextEffect` property.
 
 ```cs
 using IronWord;
 using IronWord.Models;
 
 // Initialize a new Word document
-WordDocument document = new WordDocument();
+WordDocument doc = new WordDocument();
 
-// Configure the text style with outline effect
-TextStyle textStyling = new TextStyle();
-textStyling.TextEffect = new TextEffect()
+// Set up the text style with an outline
+TextStyle textStyle = new TextStyle();
+textStyle.TextEffect = new TextEffect()
 {
     TextOutlineEffect = TextOutlineEffect.DefaultEffect,
 };
 
-// Apply styled text to the document
-document.AddText("Hello World").Style = textStyling;
+// Apply the style to new text
+doc.AddText("Hello World").Style = textStyle;
 
 // Save the document with outline effects
-document.SaveAs("StyledTextOutline.docx");
+doc.SaveAs("textOutlineEffect.docx");
 ```
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/text-outline-effect.webp" alt="Text outline effect showcase" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/text-outline-effect.webp" alt="Demonstration of text outline effect" class="img-responsive add-shadow">
     </div>
 </div>
 
-## Text Outline Effect Configuration Options
+## Properties of the Text Outline Effect
 
-Below are several properties available for customizing text outline effects to meet specific design requirements:
+The text outline effect provides a diverse range of properties that can be customized to fit various aesthetic and functional needs. The properties below are integral to shaping the look and feel of your text’s outline:
 
-- **PenAlignment**: Defines the alignment of the outline pen.
-- **LineCapType**: Specifies the cap style at the end of lines.
-- **LineWidth**: Determines the thickness of the outline (measured in points, where 1 point equals 1/72 inch).
-- **CompoundLineType**: Sets the compound line style.
-- **LineJoin**: Configures the join style between stroke segments.
-- **Color**: Assigns the color of the outline.
-- **presetLineDash**: Applies a preset dash pattern.
+- **PenAlignment**: Defines the outline’s alignment.
+- **LineCapType**: Specifies the end cap style of the outline line.
+- **LineWidth**: Sets the thickness of the outline, measured in points.
+- **CompoundLineType**: Determines the type of compound line style.
+- **LineJoin**: Controls the style of the line connections.
+- **Color**: Chooses the color of the outline.
+- **PresetLineDash**: Selects a preset pattern for the line’s dash style.
 
 ```cs
 using IronWord;
 using IronWord.Models;
 using IronWord.Models.Enums;
 
-// Initiate a new Word document
-WordDocument document = new WordDocument();
+// Start a new Word document
+WordDocument doc = new WordDocument();
 
-// Set up text style with specific outline properties
-TextStyle textStyling = new TextStyle();
-textStyling.TextEffect = new TextEffect()
+// Define and configure the text style with specific properties
+TextStyle textStyle = new TextStyle();
+textStyle.TextEffect = new TextEffect()
 {
     TextOutlineEffect = new TextOutlineEffect()
     {
@@ -72,19 +77,19 @@ textStyling.TextEffect = new TextEffect()
         LineJoin = StrokeJoinStyleValues.Bevel,
         LineWidth = 0.3,
         PenAlignment = PenAlignmentValues.Center,
-        presetLineDash = PresetLineDashValues.Solid
+        PresetLineDash = PresetLineDashValues.Solid,
     },
 };
 
-// Attach the custom style to new text
-document.AddText("Outlined Text Example").Style = textStyling;
+// Insert text with the newly created style
+doc.AddText("Customized text outline").Style = textStyle;
 
-// Output the finalized Word document
-document.SaveAs("DetailedTextOutlineEffect.docx");
+// Output the document with custom outlines
+doc.SaveAs("customizedTextOutlineEffect.docx");
 ```
 
 <div class="content-img-align-center">
     <div class="center-image-wrapper">
-         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/customized-text-outline.webp" alt="Detailed view of customized text outline effect" class="img-responsive add-shadow">
+         <img src="https://ironsoftware.com/static-assets/word/how-to/text-effect-text-outline-effect/customized-text-outline.webp" alt="Customized text outline effect" class="img-responsive add-shadow">
     </div>
 </div

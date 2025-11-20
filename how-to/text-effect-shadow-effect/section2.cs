@@ -1,4 +1,4 @@
-using IronWord.Models.Enums;
+using IronWord.Models;
 using IronWord;
 namespace IronWord.Examples.HowTo.TextEffectShadowEffect
 {
@@ -13,25 +13,14 @@ namespace IronWord.Examples.HowTo.TextEffectShadowEffect
             TextStyle textStyle = new TextStyle();
             textStyle.TextEffect = new TextEffect()
             {
-                ShadowEffect = new Shadow()
-                {
-                    Alignment = RectangleAlignmentValues.BottomLeft,
-                    BlurRadius = 5,
-                    DirectionAngle = 45,
-                    DistanceFromText = 3,
-                    HorizontalScalingFactor = 100,
-                    VerticalScalingFactor = 100,
-                    HorizontalSkewAngle = 0,
-                    SchemeColor = IronWord.Models.Color.Aqua,
-                    VerticalSkewAngle = 0,
-                },
+                ShadowEffect = Shadow.OuterShadow1,
             };
             
             // Add text with style
-            doc.AddText("Customized shadow").Style = textStyle;
+            doc.AddText("Hello World").Style = textStyle;
             
             // Export new Word document
-            doc.SaveAs("customizedShadowEffect.docx");
+            doc.SaveAs("shadowEffect.docx");
         }
     }
 }

@@ -1,4 +1,4 @@
-using IronWord.Models.Enums;
+using IronWord.Models;
 using IronWord;
 namespace IronWord.Examples.Tutorial.DocumentElement
 {
@@ -6,36 +6,24 @@ namespace IronWord.Examples.Tutorial.DocumentElement
     {
         public static void Run()
         {
-            // Load docx
-            WordDocument doc = new WordDocument("document.docx");
-            
-            // Configure text
-            Text textRun = new Text();
-            textRun.Text = "Add text using IronWord";
-            textRun.Style = new TextStyle()
-            {
-                TextFont = new Font()
-                {
-                    FontFamily = "Caveat",
-                    FontSize = 72,
-                },
-                Color = Color.Red,
-                IsBold = true,
-                IsItalic = true,
-                Underline = new Underline(),
-                Strike = StrikeValue.Strike,
-            };
-            
-            Paragraph paragraph = new Paragraph();
+            WordDocument doc = new WordDocument();
             
             // Add text
-            paragraph.AddText(textRun);
+            TextContent addText = new TextContent("Add text using IronWord");
+            doc.AddParagraph(new Paragraph(addText));
             
-            // Add paragraph
-            doc.AddParagraph(paragraph);
+            // Append text
+            TextContent appendText = new TextContent("The first text.");
+            appendText.Append(new TextContent("The second text."));
+            doc.AddParagraph(new Paragraph(appendText));
+            
+            // Split text
+            TextContent splitText = new TextContent("Use split to split the sentence.");
+            splitText.Split(" ");
+            doc.AddParagraph(new Paragraph(splitText));
             
             // Export docx
-            doc.SaveAs("save_document.docx");
+            doc.SaveAs("textrun.docx");
         }
     }
 }

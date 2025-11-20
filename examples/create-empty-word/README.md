@@ -1,3 +1,7 @@
 ***Based on <https://ironsoftware.com/examples/create-empty-word/>***
 
-IronWord streamlines the process of generating new Word and DOCX documents. Start by creating a new instance of the `WordDocument` object. You can also use different document structure objects like a paragraph, table, or section to initiate a new Word document. To finalize and save your document, employ the `SaveAs` method.
+## IronWord: Streamlining Word and DOCX Document Creation
+
+IronWord simplifies the process of creating Word and DOCX documents. Start by creating a new `WordDocument` object. Then, structure your document by adding elements like paragraphs, tables, and sections, all of which can be incorporated directly into your new Word document. Once your document is structured to your satisfaction, you can save your work using the `SaveAs` method.
+
+[Discover the Document Structuring with IronWord Guide](https://ironsoftware.com/csharp/word/tutorials/document-element/)

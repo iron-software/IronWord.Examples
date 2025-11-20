@@ -1,5 +1,7 @@
 ***Based on <https://ironsoftware.com/examples/add-table/>***
 
-Tables are essentially a matrix of cells configured in rows and columns, offering a methodical way to display and manage data. This structural component is pivotal for various applications including the formulation of timetables, data management, and methodical content arrangement.
+A table consists of a systematic array of cells positioned in ordered rows and columns. This essential tool aids in the structured presentation and arrangement of data. Each cell represents the crossing point between a row and a column, and tables are versatile, utilized for tasks such as scheduling, data compilation, and tidying up information presentation.
 
-To incorporate a table into a document using IronWord, begin by creating a new table instance by specifying the desired size through its rows and columns. From there, you can tailor the style of the table to meet your specific needs. Each cell within the table can be accessed and manipulated using the `[row, column]` notation, allowing for individual styling and the insertion of various elements such as `textrun`, `paragraph`, `image`, and `shape` into the cells. After configuring the table object thoroughly, it is ready to be integrated into a new Word document.
+To introduce a table using IronWord, begin by establishing the table object with a defined number of rows and columns to suit your needs. You can then proceed to tailor the style of the entire table as desired. Each cell within the table is accessible through the **[row, column]** index, where you can apply individual styling and integrate various document elements like text runs, paragraphs, images, and shapes. After configuring the table structure, this object can then be employed to generate a new Word document.
+
+[Learn How to Add Tables in Word with IronWord](https://ironsoftware.com/csharp/word/how-to/add-table/)

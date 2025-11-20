@@ -5,7 +5,7 @@ using IronWord.Models;
 WordDocument doc = new WordDocument();
 
 // Create textrun
-Text textRun = new Text();
+TextContent textRun = new TextContent();
 textRun.Text = "sample text";
 
 // Create paragraph

@@ -5,7 +5,7 @@ using IronWord.Models;
 WordDocument doc = new WordDocument();
 
 // Configure image
-IronWord.Models.Image image = new IronWord.Models.Image("salvatore-tonnara.jpg");
+IronWord.Models.ImageContent image = new IronWord.Models.ImageContent("salvatore-tonnara.jpg");
 image.Width = 200; // In unit pixel
 image.Height = 200; // In unit pixel
 Paragraph paragraph = new Paragraph();

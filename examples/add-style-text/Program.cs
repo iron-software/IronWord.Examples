@@ -6,7 +6,7 @@ using IronWord.Models.Enums;
 WordDocument doc = new WordDocument("document.docx");
 
 // Configure text
-Text text = new Text();
+TextContent text = new TextContent();
       text.Text = "Add text using IronWord";
 text.Style = new TextStyle()
 {

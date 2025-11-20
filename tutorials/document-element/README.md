@@ -3,181 +3,212 @@
 ***Based on <https://ironsoftware.com/tutorials/document-element/>***
 
 
-IronWord is a sophisticated library that enables .NET C# developers to seamlessly integrate Word and DOCX document processing capabilities—such as creation, reading, and modification—into their applications. In a Word document, these "document elements" act as fundamental components that compose the document's structure.
+IronWord is a robust library designed for .NET C# developers. It facilitates the integration of Word document operations—such as creation, reading, and editing—directly into their software applications. Within a Word document, document elements serve as the foundational components that compile the document's content.
+
+*as-heading:2(Quickstart: Combine Styled Text and an Image Seamlessly)*
+
+Using IronWord, you can swiftly incorporate rich content. This allows you to merge styled text with an embedded image within a single paragraph, all while saving the document through an efficient, fluent code block. This is ideal for developers eager to begin without unnecessary steps.
+
+```cs
+:title=Easily Combine Text and Images using IronWord
+new WordDocument()
+  .AddParagraph(new Paragraph(new TextContent("Welcome to IronWord!")).AddImage(new ImageContent("https://ironsoftware.com/pic.png")))
+  .SaveAs("example.docx");
+```
+
+----
 
 ## Table of Contents
 
-- **Add TextRuns**
-  - [Text Content](#anchor-text-content) (Add, Append & Split)
-  - [Set Styling](#anchor-set-styling) (Font Family & Size, Color, Bold & Italic, Strikethrough, Underline, Superscript & Subscript)
-  - [Embed Images](#anchor-embed-images)
-- **Add Images**
-  - [Load Image](#anchor-load-image) (File & FileStream)
-  - [Set Wrap Text](#anchor-configure-image)
-  - [Set Dimensions](#anchor-configure-image) (Width & Height)
-  - [Set Position Offset](#anchor-configure-image)
-  - [Set Distance from Corners](#anchor-configure-image)
+- **Text Handling**
+  - [Text Operations](#anchor-text-content) (Addition, Appending & Segmentation)
+  - [Apply Styling](#anchor-set-styling) (Typeface & Size, Color, Bold & Italic, Line-through, Underline, Superscript & Subscript)
+  - [Image Embedding](#anchor-embed-images)
+- **Image Processing**
+  - [Image Retrieval](#anchor-load-image) (File & FileStream)
+  - [Adjust Text Wrapping](#anchor-configure-image)
+  - [Modify Dimensions](#anchor-configure-image) (Width & Height)
+  - [Alter Position](#anchor-configure-image)
+  - [Set Margin](#anchor-configure-image)
 
-<h3>Get started with IronZIP</h3>
+## Text Blocks
 
-------------------
+### Text Operations
 
-## Add TextRuns
+The `Split` method allows the separation of a text run into multiple smaller TextRuns based on a chosen delimiter, facilitating structured document authoring.
 
-### Text Content
-
-Utilizing the `Split` function, you can break a text run into multiple smaller TextRuns using a designated delimiter. This feature is advantageous for organizing and managing text effectively within your document.
-
-```cs
+```csharp
 using IronWord;
 using IronWord.Models;
 
 WordDocument doc = new WordDocument();
 
-// Adding text
-Text addText = new Text("Incorporate text with IronWord");
-doc.AddParagraph(new Paragraph(addText));
+// Add text
+TextContent newText = new TextContent("Add text using IronWord");
+doc.AddParagraph(new Paragraph(newText));
 
-// Appending text
-Text appendText = new Text("Initial text.");
-appendText.Append(new Text("Additional text."));
-doc.AddParagraph(new Paragraph(appendText));
+// Extend text
+TextContent extraText = new TextContent("Initial text.");
+extraText.Append(new TextContent("Additional text."));
+doc.AddParagraph(new Paragraph(extraText));
 
-// Splitting text
-Text splitText = new Text("Demonstrate splitting of this sentence.");
-splitText.Split(" ");
-doc.AddParagraph(new Paragraph(splitText));
+// Divide text
+TextContent textToSplit = new TextContent("Divide this sentence into segments.");
+textToSplit.Split(" ");
+doc.AddParagraph(new Paragraph(textToSplit));
 
 // Save the document
-doc.SaveAs("example_text.docx");
+doc.SaveAs("text-example.docx");
 ```
 
-### Set Styling
+### Apply Styling
 
-You can establish the text's visual aspects through styling options in TextRuns, such as font type, size, color, and text formatting like bold, italic, strikethrough, and underlining, including superscript and subscript. Styling elevates the document’s visual appeal and readability.
+Adjusting styling for TextRuns involves setting the visual characteristics of the text. This might include font characteristics, color, styling, and other textual attributes to enhance document readability.
 
-```cs
+```csharp
 using IronWord;
 using IronWord.Models;
 using IronWord.Models.Enums;
 
-// Open existing docx file
-WordDocument doc = new WordDocument("styled_document.docx");
+// Open an existing document
+WordDocument doc = new WordDocument("document.docx");
 
-// Set text properties
-Text textRun = new Text();
-textRun.Text = "Enhance text with IronWord";
-textRun.Style = new TextStyle()
+// Set up text
+TextContent styledText = new TextContent("Styling with IronWord");
+styledText.Style = new TextStyle()
 {
     TextFont = new Font()
     {
-        FontFamily = "Arial",
-        FontSize = 48,
+        FontFamily = "Caveat",
+        FontSize = 72,
     },
     Color = Color.Blue,
     IsBold = true,
     IsItalic = false,
     Underline = new Underline(),
-    Strike = StrikeValue.None,
+    Strike = StrikeValue.NoStrike,
 };
 
-Paragraph paragraph = new Paragraph();
+Paragraph styledParagraph = new Paragraph();
 
-// Add the styled text to the paragraph
-paragraph.AddText(textRun);
+// Add styled text
+styledParagraph.AddText(styledText);
 
-// Add styled paragraph
-doc.AddParagraph(paragraph);
+// Insert styled paragraph
+doc.AddParagraph(styledParagraph);
 
 // Save the styled document
-doc.SaveAs("styled_output.docx");
+doc.SaveAs("styled-doc.docx");
 ```
 
-### Embed Images
+### Obtain Text Fill Color
 
-Embedding images into your document amplifies the visual appeal and communicative effectiveness, making the content more engaging and illustrative.
+IronWord provides methods to retrieve the RGBA color of the text, allowing for consistent styling across the document.
 
 ```cs
 using IronWord;
 using IronWord.Models;
+using System;
 
-// Create a new Word document
-WordDocument doc = new WordDocument();
+// Open a Word document
+WordDocument doc = new WordDocument("Accent1TextThemeColor.docx");
 
-// Prepare the image and its settings
-IronWord.Models.Image image = new IronWord.Models.Image("https://ironsoftware.com/csharp/ocr/assetcs/image.jpg");
-image.Width = 300; // Specify width in pixels
-image.Height = 300; // Specify height in pixels
-Text textRun = new Text();
+TextContent content = doc.Paragraphs[0].Texts[0];
 
-// Embed the image in a new paragraph
-Paragraph para = new Paragraph(textRun);
-para.AddImage(image);
+// Retrieve RGBA values
+var fillColor = content.FillColor;
 
-// Append the new paragraph with the image
-doc.AddParagraph(new Paragraph(textRun));
-
-// Save the document with the image
-doc.SaveAs("document_with_images.docx");
+// Display RGBA values
+Console.WriteLine(fillColor);
 ```
 
-## Add Images
+IronWord initializes the `WordDocument` instance, accesses the first paragraph, retrieves the text, and fetches the `FillColor`, displaying RGBA values of the theme color.
+
+### Image Embedding
+
+Embedding images enhances documents by adding visual elements that communicate more than text alone.
+
+```csharp
+using IronWord;
+using IronWord.Models;
+
+// Start with a fresh document
+WordDocument doc = new WordDocument();
+
+// Prepare image settings
+ImageContent imageSetup = new ImageContent("https://ironsoftware.com/image.jpg");
+imageSetup.Width = 200; // in pixels
+imageSetup.Height = 200; // in pixels
+TextContent accompanyingText = new TextContent();
+
+// Combine text and image
+Paragraph combinePara = new Paragraph(accompanyingText);
+combinePara.AddImage(imageSetup);
+
+// Embed into document
+doc.AddParagraph(new Paragraph(accompanyingText));
+
+// Finalize the document
+doc.SaveAs("document-with-image.docx");
+```
+
+## Image Processing
 
 ### Load Image
 
-The process of loading images involves importing external visual files into the document. Being able to incorporate these visuals helps in making the document more engaging and enriching the content visually.
+Extracting and embedding images into the document is an essential feature in enhancing the document with relevant visual content.
 
-```cs
+```csharp
 using IronWord;
 using IronWord.Models;
 
-// Initiate a new Word document
+// Begin a new document
 WordDocument doc = new WordDocument();
 
-Paragraph paragraph = new Paragraph();
+Paragraph para = new Paragraph();
 
-// Insert an external image
-paragraph.AddImage("https://ironsoftware.com/csharp/ocr/assets/image.jpg");
+// Embed an image
+para.AddImage("https://ironsoftware.com/image.jpg");
 
-// Append the paragraph to the document
-doc.AddParagraph(paragraph);
+// Append the paragraph
+doc.AddParagraph(para);
 
-// Export the document containing the image
-doc.SaveAs("image_included.docx");
+// Finalize and save
+doc.SaveAs("image-doc.docx");
 ```
 
 ### Configure Image
 
-Enhance your document's layout by configuring images with properties such as text wrapping, size, positioning, and alignment relative to page elements. These adjustments help with the aesthetic integration of images within the document.
+Configuring image settings allows for tailored placement and appearance, ensuring images complement the textual content.
 
-```cs
+```csharp
 using IronWord;
 using IronWord.Models;
 using IronWord.Models.Enums;
 
-// Start a new Word document
+// Create a new document
 WordDocument doc = new WordDocument();
 
-// Image settings
-IronWord.Models.Image image = new IronWord.Models.Image("https://ironsoftware.com/csharp/ocr/assets/image.jpg");
-image.WrapText = WrapText.Tight;
-image.Width = 150;
-image.Height = 150;
-image.DistanceFromTop = 30;
+// Image configuration
+ImageContent imageSettings = new ImageContent("https://ironsoftware.com/image.jpg");
+imageSettings.WrapText = WrapText.Square;
+imageSettings.Width = 100;
+imageSettings.Height = 100;
+imageSettings.DistanceFromTop = 50;
 
-var position = new ElementPosition();
-position.X = 100;
-position.Y = 100;
-image.Position = position;
+var placement = new ElementPosition();
+placement.X = 50;
+placement.Y = 50;
+imageSettings.Position = placement;
 
-Paragraph paragraph = new Paragraph();
+Paragraph imageParagraph = new Paragraph();
 
-// Embed the configured image
-paragraph.AddImage(image);
+// Embed configured image
+imageParagraph.AddImage(imageSettings);
 
-// Include the paragraph
-doc.AddParagraph(paragraph);
+// Add paragraph
+doc.AddParagraph(imageParagraph);
 
-// Save the configured document
-doc.SaveAs("configured_image.docx");
+// Export the configured document
+doc.SaveAs("configured-image.docx");
 ```

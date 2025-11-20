@@ -1,4 +1,4 @@
-using IronWord.Models;
+using IronWord.Models.Enums;
 using IronWord;
 namespace IronWord.Examples.Tutorial.DocumentElement
 {
@@ -7,20 +7,32 @@ namespace IronWord.Examples.Tutorial.DocumentElement
         public static void Run()
         {
             // Load docx
-            WordDocument doc = new WordDocument();
+            WordDocument doc = new WordDocument("document.docx");
             
-            // Configure image
-            IronWord.Models.Image image = new IronWord.Models.Image("image.jpg");
-            image.Width = 200; // In unit pixel
-            image.Height = 200; // In unit pixel
-            Text textRun = new Text();
+            // Configure text
+            TextContent textRun = new TextContent();
+            textRun.Text = "Add text using IronWord";
+            textRun.Style = new TextStyle()
+            {
+                TextFont = new Font()
+                {
+                    FontFamily = "Caveat",
+                    FontSize = 72,
+                },
+                Color = Color.Red,
+                IsBold = true,
+                IsItalic = true,
+                Underline = new Underline(),
+                Strike = StrikeValue.Strike,
+            };
             
-            // Add image
-            Paragraph para = new Paragraph(textRun);
-            para.AddImage(image);
+            Paragraph paragraph = new Paragraph();
+            
+            // Add text
+            paragraph.AddText(textRun);
             
             // Add paragraph
-            doc.AddParagraph(new Paragraph(textRun));
+            doc.AddParagraph(paragraph);
             
             // Export docx
             doc.SaveAs("save_document.docx");

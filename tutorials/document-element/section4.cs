@@ -1,4 +1,4 @@
-using IronWord.Models;
+using System;
 using IronWord;
 namespace IronWord.Examples.Tutorial.DocumentElement
 {
@@ -6,19 +6,16 @@ namespace IronWord.Examples.Tutorial.DocumentElement
     {
         public static void Run()
         {
-            // Load docx
-            WordDocument doc = new WordDocument();
+            // Open existing Word
+            WordDocument doc = new WordDocument("Accent1TextThemcolor.docx");
             
-            Paragraph paragraph = new Paragraph();
+            TextContent content = doc.Paragraphs[0].Texts[0];
             
-            // Add image
-            paragraph.AddImage("image.jpg");
+            // This will show the R G B A of the themecolor
+            var filledColor = content.FillColor;
             
-            // Add paragraph
-            doc.AddParagraph(paragraph);
-            
-            // Export docx
-            doc.SaveAs("document.docx");
+            // Print the filled color variable to the console
+            Console.WriteLine(filledColor);
         }
     }
 }

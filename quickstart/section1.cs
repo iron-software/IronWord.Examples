@@ -5,7 +5,8 @@ namespace IronWord.Examples.Overview.Quickstart
     {
         public static void Run()
         {
-            IronWord.License.LicenseKey = "IRONWORD.MYLICENSE.KEY.1EF01";
+            // Assign your license key
+            License.LicenseKey = "YOUR_LICENSE_KEY_HERE";
         }
     }
 }

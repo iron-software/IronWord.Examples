@@ -1,3 +1,5 @@
 ***Based on <https://ironsoftware.com/examples/log-object-tree/>***
 
-Logging the object tree while building a Word document offers critical debugging insights and verification resources, allowing developers to swiftly pinpoint and correct any mistakes or irregularities within the document's structure. Examining the object tree is crucial for optimizing performance as it enables developers to spot and remedy inefficiencies during the document construction phase. In essence, implementing object tree logging enhances the development process, assuring the production of superior-quality Word documents efficiently.
+Logging the object structure while crafting a Word document equips developers with crucial debugging tools and insights, making it easier to spot and resolve errors or inconsistencies in the document's framework. Examining the object structure also contributes to performance enhancements by pinpointing and addressing inefficiencies during construction. In essence, logging the object structure enhances the development workflow, facilitating the production of superior Word documents efficiently.
+
+[Explore Document Elements with IronWord Tutorial](https://ironsoftware.com/csharp/word/tutorials/document-element/).

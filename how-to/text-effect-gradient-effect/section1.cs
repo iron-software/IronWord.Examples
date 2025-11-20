@@ -1,4 +1,3 @@
-using IronWord.Models;
 using IronWord;
 namespace IronWord.Examples.HowTo.TextEffectGradientEffect
 {
@@ -6,21 +5,10 @@ namespace IronWord.Examples.HowTo.TextEffectGradientEffect
     {
         public static void Run()
         {
-            // Create new Word document
-            WordDocument doc = new WordDocument();
-            
-            // Create and configure text style
-            TextStyle textStyle = new TextStyle();
-            textStyle.TextEffect = new TextEffect()
-            {
-                GradientEffect = Gradient.DefaultGray,
-            };
-            
-            // Add text with style
-            doc.AddText("Hello World").Style = textStyle;
-            
-            // Export new Word document
-            doc.SaveAs("gradientEffect.docx");
+            :title=Apply Gradient Text Easily
+            var doc = new IronWord.WordDocument();
+            doc.AddText("Test").Style = new IronWord.Models.TextStyle(){ TextEffect = new IronWord.Models.TextEffect(){ GradientEffect = IronWord.Models.Gradient.DefaultGray } };
+            doc.SaveAs("out.docx");
         }
     }
 }

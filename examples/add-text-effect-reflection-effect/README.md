@@ -1,5 +1,5 @@
 ***Based on <https://ironsoftware.com/examples/add-text-effect-reflection-effect/>***
 
-Let's construct a fresh Word document and insert text that features a reflection effect. Firstly, a **WordDocument** object called `doc` is initialized. Following this, a **TextStyle** object is created and prepared with a reflection effect by assigning its **TextEffect** property to a new `Reflection` object. The text "Hello World" is then added to this document, showcasing the reflection effect. To conclude, the document is saved.
+Create a new MS Word document and insert text embellished with a reflection effect. We start by creating a `WordDocument` object named `doc`. Next, a `TextStyle` object is defined. This style is enhanced by adding a reflection effect, achieved by setting its `TextEffect` property to a new `Reflection` object. Following this configuration, the text "Hello World" is inserted into the document using this style. This process culminates with the document being saved.
 
-For additional examples and detailed demonstrations, please refer to the article: [How to Add Reflection Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-reflection-effect/).
+Discover more about document elements in IronWord by visiting [IronWord tutorials on Document Elements](https://ironsoftware.com/csharp/word/tutorials/document-element/).

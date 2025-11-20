@@ -1,3 +1,5 @@
 ***Based on <https://ironsoftware.com/examples/add-image/>***
 
-The provided code snippet demonstrates how to load a Word document and set up an image with predefined dimensions. Following this, a new `Paragraph` object is created to house the image. The image is incorporated into the paragraph through the `AddImage` method. This paragraph, now embedded with the image, is then appended to the document using the `AddParagraph` method. Ultimately, the altered document is saved.
+The following code example illustrates the process of opening a Word document, setting up an image with precise dimensions, and integrating this image into the document. First, a new `Paragraph` object is instantiated to hold the image. The `AddImage` method of the paragraph is then utilized to insert the image. Next, this paragraph, which now includes the image, is appended to the document via the `AddParagraph` method. To conclude, the newly updated document is saved.
+
+[Learn more about Document Elements in this detailed tutorial.](https://ironsoftware.com/csharp/word/tutorials/document-element/)

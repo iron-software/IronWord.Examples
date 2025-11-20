@@ -1,4 +1,4 @@
-using IronWord.Models.Enums;
+using IronWord.Models;
 using IronWord;
 namespace IronWord.Examples.HowTo.TextEffectTextOutlineEffect
 {
@@ -13,23 +13,14 @@ namespace IronWord.Examples.HowTo.TextEffectTextOutlineEffect
             TextStyle textStyle = new TextStyle();
             textStyle.TextEffect = new TextEffect()
             {
-                TextOutlineEffect = new TextOutlineEffect()
-                {
-                    Color = IronWord.Models.Color.Red,
-                    CompoundLineType = CompoundLineValues.Double,
-                    LineCapType = LineCapValues.Round,
-                    LineJoin = StrokeJoinStyleValues.Bevel,
-                    LineWidth = 0.3,
-                    PenAlignment = PenAlignmentValues.Center,
-                    presetLineDash = PresetLineDashValues.Solid
-                },
+                TextOutlineEffect = TextOutlineEffect.DefaultEffect,
             };
             
             // Add text with style
-            doc.AddText("Customized text outline").Style = textStyle;
+            doc.AddText("Hello World").Style = textStyle;
             
             // Export new Word document
-            doc.SaveAs("customizedTextOutlineEffect.docx");
+            doc.SaveAs("textOutlineEffect.docx");
         }
     }
 }

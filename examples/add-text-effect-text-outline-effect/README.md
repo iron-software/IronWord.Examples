@@ -1,5 +1,5 @@
 ***Based on <https://ironsoftware.com/examples/add-text-effect-text-outline-effect/>***
 
-Applying a text outline to text is incredibly straightforward using IronWord. Despite its ease of use, each attribute of the text outline can be fine-tuned to meet specific requirements. Once a Word document has been loaded, the `textStyle` is set to incorporate a text outline effect by assigning `TextOutlineEffect.DefaultEffect` to the **TextOutlineEffect** property of a new `TextEffect` instance. This customized effect can then be applied to any amount of text. Finally, the document is saved with the new formatting.
+Applying a text outline with IronWord is incredibly straightforward, yet it offers full customization for all its attributes. Start by importing a Word document. Next, configure the `textStyle` by setting `TextOutlineEffect.DefaultEffect` as the value for the **TextOutlineEffect** property on a newly created `TextEffect` instance. You can apply this effect to any amount of text you need. Once done, export your document to finalize the changes.
 
-For additional examples and demonstrations, consider visiting the following article: [How to Add Text Outline Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-text-outline-effect/).
+[Learn more about Document Elements with IronWord.](https://ironsoftware.com/csharp/word/tutorials/document-element/)

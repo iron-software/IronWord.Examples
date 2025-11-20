@@ -1,26 +1,31 @@
-# How to Add a Reflection Effect to Text
+# How to Add Reflection Effect to Text
 
 ***Based on <https://ironsoftware.com/how-to/text-effect-reflection-effect/>***
 
 
-A reflection effect on text adds a mirrored image of the text just below the original, giving an illusion that the text is reflected on a surface. This creative touch can add dimension and a realistic feel to your graphical displays.
+Creating a reflection effect for text involves producing a mirrored image of the text below it, akin to how it would appear reflected on a surface. This can lend a sense of depth and enhance the visual impact of the text in your design.
 
-### Introduction to IronWord
+### Quickstart: Apply Reflection Effect to Text in C#
 
----
-
-## Implementing Reflection Effect
-
-To apply a reflection effect, initiate a **TextStyle** object and set up the `ReflectionEffect` within with a **Reflection** instance. This is then applied to the new text by setting the **TextStyle** object as the `TextEffect`.
+Using the IronWord library, it's straightforward to implement a reflection effect on text with minimal code. This allows developers to quickly incorporate this feature without the need for extensive setup.
 
 ```cs
+:title=Apply Reflection Effect Instantly
+new IronWord.WordDocument().AddText("Example Text").Style = new IronWord.Models.TextStyle(){ TextEffect = new IronWord.Models.TextEffect(){ ReflectionEffect = new IronWord.Models.Reflection() } };
+```
+
+## Implement Reflection Effect
+
+To apply a reflection effect, initiate a `TextStyle` object and set up the `ReflectionEffect` property with a new instance of `Reflection`. Then, apply this style when you add text to your document by setting the `TextStyle` to the `TextEffect` of your text.
+
+```csharp
 using IronWord;
 using IronWord.Models;
 
-// Initialize a new Word document
+// Instantiate a new Word document
 WordDocument doc = new WordDocument();
 
-// Define and apply a text style
+// Initialize and set up text style
 TextStyle textStyle = new TextStyle();
 textStyle.TextEffect = new TextEffect()
 {
@@ -28,10 +33,10 @@ textStyle.TextEffect = new TextEffect()
 };
 
 // Insert styled text
-doc.AddText("Hello World").Style = textStyle;
+doc.AddText("Sample Text").Style = textStyle;
 
-// Save the created Word document
-doc.SaveAs("reflectionEffect.docx");
+// Output the document
+doc.SaveAs("StyledText.docx");
 ```
 
 <div class="content-img-align-center">
@@ -40,34 +45,34 @@ doc.SaveAs("reflectionEffect.docx");
     </div>
 </div>
 
-## Properties of the Reflection Effect
+## Reflection Effect Properties
 
-The reflection effect includes various settings that can be customized to fit different design preferences. Below is a breakdown of each property:
+The reflection effect can be tailored with a variety of properties, allowing customization to fit different design needs. Here’s a breakdown of these properties and their uses:
 
-- **SchemeColor**: Access or modify the color scheme of the reflection.
-- **HorizontalSkewAngle**: Adjust the horizontal skew angle, measured in degrees.
-- **HorizontalScalingFactor**: Change the horizontal scale of the reflection.
-- **DistanceFromText**: Set how far the reflection is from the text or other objects, measured in points (1/72 inch).
-- **DirectionAngle**: Define the overall direction of the reflection in degrees.
-- **FadeDirectionAngle**: Specify the angle at which the reflection fades.
-- **EndPosition**: Determine the final position of the reflection.
-- **StartPosition**: Set the initial position of the reflection.
-- **EndingOpacity**: Adjust the opacity at the end of the reflection.
-- **VerticalScalingFactor**: Modify the vertical scale of the reflection.
-- **StartingOpacity**: Set the starting opacity of the reflection.
-- **Alignment**: Choose how the reflection aligns with the text or object.
-- **BlurRadius**: Specify the radius of the blur on the reflection, measured in points.
-- **VerticalSkewAngle**: Adjust the vertical skew angle, in degrees.
+- `SchemeColor`: Defines the color used for the reflection.
+- `HorizontalSkewAngle`: Specifies the angle for horizontal skewing of the reflection in degrees.
+- `HorizontalScalingFactor`: Controls the horizontal scaling size of the reflection.
+- `DistanceFromText`: Sets how far the reflection should be from the text, measured in points.
+- `DirectionAngle`: Dictates the angle direction of the reflection in degrees.
+- `FadeDirectionAngle`: Adjusts the direction of the fading effect for the reflection.
+- `EndPosition`: Designates the end point for the reflection.
+- `StartPosition`: Indicates the starting point of the reflection.
+- `EndingOpacity`: Determines the opacity level at the end of the reflection.
+- `VerticalScalingFactor`: Adjusts the vertical scale of the reflection.
+- `StartingOpacity`: Sets the initial opacity level of the reflection.
+- `Alignment`: Specifies the alignment setting for the reflection.
+- `BlurRadius`: Applies a blur effect to the reflection with a specified radius.
+- `VerticalSkewAngle`: Specifies the angle for vertical skewing of the reflection.
 
-```cs
+```csharp
 using IronWord;
 using IronWord.Models;
 using IronWord.Models.Enums;
 
-// Initialize a new Word document
+// Create a new Word document instance
 WordDocument doc = new WordDocument();
 
-// Define and apply a text style with detailed reflection properties
+// Configure text style with reflection properties
 TextStyle textStyle = new TextStyle();
 textStyle.TextEffect = new TextEffect()
 {
@@ -90,11 +95,11 @@ textStyle.TextEffect = new TextEffect()
     },
 };
 
-// Insert styled text
-doc.AddText("Customized reflection").Style = textStyle;
+// Add and style text
+doc.AddText("Advanced Reflection Example").Style = textStyle;
 
-// Save the configured Word document
-doc.SaveAs("customizedReflectionEffect.docx");
+// Save the final document
+doc.SaveAs("AdvancedStyledDoc.docx");
 ```
 
 <div class="content-img-align-center">

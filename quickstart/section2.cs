@@ -1,4 +1,3 @@
-using IronWord.Models;
 using IronWord;
 namespace IronWord.Examples.Overview.Quickstart
 {
@@ -6,17 +5,26 @@ namespace IronWord.Examples.Overview.Quickstart
     {
         public static void Run()
         {
-            // Create textrun
-            Text textRun = new Text("Sample text");
+            class Program
+            {
+                static void Main()
+                {
+                    var document = new WordDocument();
+                    var section = document.Sections.Add();
+                    var table = section.Tables.Add(3, 3); // 3x3 table
             
-            Paragraph paragraph = new Paragraph();
-            paragraph.AddText(textRun);
+                    // Iterate over cells and set their content
+                    for (int i = 0; i < table.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < table.Rows[i].Cells.Count; j++)
+                        {
+                            table.Rows[i].Cells[j].Paragraphs.Add().AppendText($"Cell {i+1},{j+1}");
+                        }
+                    }
             
-            // Create a new Word document
-            WordDocument doc = new WordDocument(paragraph);
-            
-            // Export docx
-            doc.SaveAs("document.docx");
+                    document.SaveAs("example_with_table.docx");
+                }
+            }
         }
     }
 }

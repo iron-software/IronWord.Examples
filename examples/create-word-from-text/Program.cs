@@ -2,7 +2,7 @@ using IronWord;
 using IronWord.Models;
 
 // Create textrun
-Text textRun = new Text("Sample text");
+TextContent textRun = new TextContent("Sample text");
 
 Paragraph paragraph = new Paragraph();
 paragraph.AddChild(textRun);

@@ -1,5 +1,5 @@
 using IronWord;
-using IronWord.Examples.HowTo.LicenseKeys;
+using IronWord.Examples.HowTo.AddImage;
 
 
 Section1.Run();

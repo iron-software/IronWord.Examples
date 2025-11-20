@@ -1,4 +1,3 @@
-using IronWord.Models;
 using IronWord;
 namespace IronWord.Examples.HowTo.TextEffectGlowEffect
 {
@@ -6,25 +5,8 @@ namespace IronWord.Examples.HowTo.TextEffectGlowEffect
     {
         public static void Run()
         {
-            // Create new Word document
-            WordDocument doc = new WordDocument();
-            
-            // Create and configure text style
-            TextStyle textStyle = new TextStyle();
-            textStyle.TextEffect = new TextEffect()
-            {
-                GlowEffect = new Glow()
-                {
-                    GlowColor = IronWord.Models.Color.Aqua,
-                    GlowRadius = 10,
-                },
-            };
-            
-            // Add text with style
-            doc.AddText("Hello World").Style = textStyle;
-            
-            // Export new Word document
-            doc.SaveAs("glowEffect.docx");
+            :title=Glow Text in Seconds
+            someTextElement.Style.TextEffect = new IronWord.Models.TextEffect { GlowEffect = new IronWord.Models.Glow { GlowRadius = 8, GlowColor = System.Drawing.Color.FromArgb(180, 0, 128, 255) } };
         }
     }
 }
