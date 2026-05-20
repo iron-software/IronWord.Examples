@@ -1,84 +1,66 @@
-![Nuget Version](https://img.shields.io/nuget/v/IronWord?color=informational&label=latest) ![Installs](https://img.shields.io/nuget/dt/IronWord?color=informational&label=installs&logo=nuget) ![Build Status](https://img.shields.io/badge/build-%20%E2%9C%93%20522%20tests%20passed%20(0%20failed)%20-107C10?logo=visualstudio) ![Windows Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=windows) ![macOS Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=apple) ![Linux Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=linux&logoColor=white) ![Docker Support](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=docker&logoColor=white) ![AWS Compatibility](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=amazonaws) ![Microsoft Azure Compatibility](https://img.shields.io/badge/%E2%80%8E%20-%20%E2%9C%93-107C10?logo=microsoftazure) [![Live Chat](https://img.shields.io/badge/Live%20Chat:-24/5-purple?logo=googlechat&logoColor=white)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=topshield#helpscout-support)
+# IronWord.Examples
 
-## IronWord - Your C# Word Processing Library
+Runnable C# examples for [IronWord](https://ironsoftware.com/csharp/word/), a .NET library for creating, reading, and editing DOCX files without Microsoft Word or Office Interop.
 
-[![IronWord NuGet Trial Banner Image](https://raw.githubusercontent.com/iron-software/iron-nuget-assets/main/IronWord-readme/nuget-trial-banner.png)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=topbanner#trial-license)
+## Install
 
-IronWord is a robust tool developed by Iron Software that enhances C# developers' capabilities in creating, editing, and storing Word documents within .NET frameworks and websites.
+```bash
+dotnet add package IronWord
+```
 
-#### Outstanding Features of IronWord:
+## Quickstart
 
-  * Comprehensive management of Word and DOCX files.
-  * PageSetup: Setting up page sizes, orientations, margins, and background colors.
-  * TextRun: Manipulating text by edging, fine-tuning styles, appending images, and more.
-  * TextStyle: Managing font type, size, colors, and text attributes like bold, italic, underline, etc.
-  * Paragraph: Assembling text runs, imagery, alignments, and sessioning lists and bullets.
-  * Table: Robust table constructions, with capabilities to add, modify, or merge table elements.
-  * Image: Integrating images with customization of dimensions and text wrapping.
-  * Shape: Inserting different shapes with adjustable text wrap, size, and rotation.
+```csharp
+using IronWord;
+using IronWord.Models;
 
-Explore these and more on [our features page](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featureslist) and see our [extensive code library](https://ironsoftware.com/csharp/word/examples/add-text/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featureslist).
+// Create a new document with a styled paragraph
+var doc = new WordDocument();
 
-#### Cross-Platform Support From IronWord:
+var paragraph = new Paragraph();
+paragraph.AddTextRun(new TextRun("Hello, IronWord!"));
+paragraph.AddTextRun(new TextRun(" Bold goes here.", new TextStyle { IsBold = true }));
 
-IronWord supports a variety of environments and frameworks:
-  * **.NET 8**, .NET 7, .NET 6, .NET 5, Core 2x & 3x, Standard 2, and Framework 4.6.2+
-  * Compatible with Systems including Windows, macOS, Linux; and Deployable via Docker, Azure, and AWS
+doc.AddParagraph(paragraph);
+doc.SaveAs("hello.docx");
+```
 
-[![IronWord Cross Platform Support](https://raw.githubusercontent.com/iron-software/iron-nuget-assets/main/IronWord-readme/cross-platform-compatibility.png)](https://ironsoftware.com/csharp/word/docs/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=crossplatformbanner)
+To open an existing document instead, use `new WordDocument("existing.docx")`. Inserting images works similarly — construct an `Image` from a file or stream, set `Width` and `Height`, and add it to a paragraph with `paragraph.AddImage(image)`.
 
-Click this link to access [API reference materials](https://ironsoftware.com/csharp/word/object-reference/api/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs) and [comprehensive licensing guidelines](https://ironsoftware.com/csharp/word/licensing/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs#trial-license).
+For production use, set a license key via `License.LicenseKey = "YOUR-KEY"`. Without one, documents include a watermark.
 
-### Installing IronWord
+## What's in this repo
 
-To use IronWord in your project, initiate the installation with this command in your package manager console:
+Each folder contains a self-contained .NET project you can open and run:
 
-    PM> Install-Package IronWord
-    
+- `examples/` — focused snippets demonstrating individual features
+- `get-started/` — minimal first projects covering installation and basic document creation
+- `how-to/` — task-oriented guides for specific document operations
+- `quickstart/` — end-to-end project scaffolds
+- `tutorials/` — longer walkthroughs combining multiple features (including the `document-element` tutorial covering paragraphs, runs, images, shapes, and tables)
 
-Then, incorporate these using statements at the beginning of your C# application:
+## Common tasks covered
 
-    using IronWord;
-    using IronWord.Models;
-    using IronSoftware.Drawing;
-    
-    // Create or load documents
-    var existingDoc = new WordDocument("existing.docx");  // Loading an existing document
-    
-    var newDoc = new WordDocument();  // Creating a new document
-    
-    // Adding textual content
-    var textParagraph = new Paragraph();
-    textParagraph.AddText(new Text() { Text = "Hello IronWord!" });
-    existingDoc.AddParagraph(textParagraph);
-    
-    // Incorporating images
-    var img = new Image("example.jpg") { Width = 200, Height = 200 };
-    var imageParagraph = new Paragraph();
-    imageParagraph.AddImage(img);
-    
-    existingDoc.AddParagraph(imageParagraph);
-    
-    // Saving documents
-    existingDoc.Save("updatedExisting.docx");  // Saving modifications
-    existingDoc.SaveAs("newDocument.docx");  // Saving as a new file
-    
+- Creating and loading DOCX files
+- Adding paragraphs, text runs, and styled text (font, size, color, bold, italic, underline, strikethrough)
+- Inserting images and shapes with positioning and text wrap
+- Building and editing tables: rows, columns, cell merging, borders, shading
+- Page setup: paper size, orientation, margins, background color
+- Bullet and numbered lists with custom indentation and nesting
+- Find-and-replace and content extraction for data processing
+- Saving to file, `MemoryStream`, or `byte[]` for HTTP delivery
 
-### Feature Summary
+## Platform support
 
-[![IronWord Feature Overview](https://raw.githubusercontent.com/iron-software/iron-nuget-assets/main/IronWord-readme/features-table.png)](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=featuresbanner)
+.NET 10, 9, 8, 7, 6, 5, .NET Core 2x/3x, .NET Standard 2, and .NET Framework 4.6.2+. Windows, macOS, Linux, Docker, Azure, and AWS. See the [installation docs](https://ironsoftware.com/csharp/word/docs/) for environment-specific notes.
 
-### Comprehensive Support & Licensing
+## Documentation and support
 
-For a full suite of code examples, licensing details, and documentation, make sure to visit us: [https://ironsoftware.com/csharp/word/](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
+- Full documentation: [ironsoftware.com/csharp/word/docs](https://ironsoftware.com/csharp/word/docs/)
+- API reference: [ironsoftware.com/csharp/word/object-reference/api](https://ironsoftware.com/csharp/word/object-reference/api/)
+- Issues with these examples: file directly on this repository
+- Product support: [support@ironsoftware.com](mailto:support@ironsoftware.com)
 
-Contact us for support at: support@ironsoftware.com
+## About
 
-### Helpful Documentation Links
-
-  * Step-by-Step Guides: [https://ironsoftware.com/csharp/word/how-to/](https://ironsoftware.com/csharp/word/how-to/html-file-to-pdf/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Sample Code: [https://ironsoftware.com/csharp/word/examples/](https://ironsoftware.com/csharp/word/examples/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Complete API Reference: [https://ironsoftware.com/csharp/word/object-reference/api/](https://ironsoftware.com/csharp/word/object-reference/api/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Tutorial Portal: [https://ironsoftware.com/csharp/word/tutorials/](https://ironsoftware.com/csharp/word/tutorials/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Licensing Information: [https://ironsoftware.com/csharp/word/licensing/](https://ironsoftware.com/csharp/word/licensing/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs)
-  * Live Chat Assistance: [https://ironsoftware.com/csharp/word/#helpscout-support](https://ironsoftware.com/csharp/word/?utm_source=nuget&utm_medium=organic&utm_campaign=readme&utm_content=supportanddocs#helpscout-support)
+This repository is maintained by [Iron Software](https://ironsoftware.com/). IronWord is a commercial library — see [licensing](https://ironsoftware.com/csharp/word/licensing/) for terms and trial details.
