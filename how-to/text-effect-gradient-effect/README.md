@@ -1,6 +1,6 @@
 # Applying Gradient Effects to Text
 
-***Based on <https://ironsoftware.com/how-to/text-effect-gradient-effect/>***
+> Full guide: [Applying Gradient Effects to Text](https://ironsoftware.com/how-to/text-effect-gradient-effect/)
 
 
 Gradient effects on text create dynamic visual transitions between colors, adding dimensions, enhancing the visual appeal, and making the text visually striking. These effects can either be linear, transitioning colors along a straight path, or radial, emanating from a central point.
@@ -10,7 +10,6 @@ Gradient effects on text create dynamic visual transitions between colors, addin
 To quickly incorporate a gradient effect on text using IronWord, you can follow this straightforward example. It demonstrates how to apply a pre-configured gradient to your text, enhancing its visual style in just a few steps.
 
 ```cs
-:title=Quick Gradient Text Application
 var document = new IronWord.WordDocument();
 document.AddText("Sample Text").Style = new IronWord.Models.TextStyle(){ TextEffect = new IronWord.Models.TextEffect(){ GradientEffect = IronWord.Models.Gradient.DefaultGray } };
 document.SaveAs("gradientTextOutput.docx");

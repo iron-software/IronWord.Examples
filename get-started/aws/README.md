@@ -1,6 +1,6 @@
 # Utilizing IronWord with AWS Lambda
 
-***Based on <https://ironsoftware.com/get-started/aws/>***
+> Full guide: [Utilizing IronWord with AWS Lambda](https://ironsoftware.com/csharp/word/get-started/aws/)
 
 
 This guide outlines the steps for implementing IronWord in an AWS Lambda environment. By the end of this article, you will know how to configure IronWord to generate and modify Word documents on AWS Lambda.

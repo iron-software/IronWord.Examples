@@ -1,16 +1,15 @@
 # How to Incorporate Tables into DOCX Documents
 
-***Based on <https://ironsoftware.com/how-to/add-table/>***
+> Full guide: [How to Incorporate Tables into DOCX Documents](https://ironsoftware.com/how-to/add-table/)
 
 
 A table, essentially a structured grid, comprises rows and columns that intersect to form cells. These cells can house a variety of data such as text and numbers, facilitating organized data presentation, schedule creation, and more.
 
-*as-heading:2(Quickstart: Add a Table Efficiently)*
+## Quickstart: Add a Table Efficiently
 
 In this streamlined approach using IronWord, you can quickly generate a table, configure its properties, populate it, embed it in a document, and save the outcome. This enables you to produce a DOCX document with a well-designed table effortlessly.
 
 ```cs
-:title=Quick Table Creation
 var table = new IronWord.Models.Table(3, 4);
 var doc = new IronWord.WordDocument();
 doc.AddTable(table);

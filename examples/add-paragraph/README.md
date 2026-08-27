@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/add-paragraph/>***
+> Full guide: [Add paragraph](https://ironsoftware.com/csharp/word/examples/add-paragraph/)
 
 The IronWord "add-paragraph" capability enables developers to seamlessly insert entire paragraphs into a Word document. This functionality is essential for efficiently structuring and organizing different segments of text into a unified section. Suitable for dynamic documents such as reports, articles, or letters, this feature supports grouping and styling text together.
 

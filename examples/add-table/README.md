@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/add-table/>***
+> Full guide: [Add table](https://ironsoftware.com/csharp/word/examples/add-table/)
 
 A table consists of a systematic array of cells positioned in ordered rows and columns. This essential tool aids in the structured presentation and arrangement of data. Each cell represents the crossing point between a row and a column, and tables are versatile, utilized for tasks such as scheduling, data compilation, and tidying up information presentation.
 

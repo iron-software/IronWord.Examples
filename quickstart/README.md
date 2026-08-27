@@ -1,6 +1,6 @@
 # Getting Started with IronWord
 
-***Based on <https://ironsoftware.com/docs/docs/>***
+> Docs: [IronWord documentation](https://ironsoftware.com/csharp/word/docs/)
 
 
 ## IronWord: Word Document Library for .NET

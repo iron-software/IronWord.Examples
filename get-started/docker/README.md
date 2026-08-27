@@ -1,6 +1,6 @@
 # Implementing IronWord in Docker Environments
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
+> Full guide: [Implementing IronWord in Docker Environments](https://ironsoftware.com/csharp/word/get-started/docker/)
 
 
 IronWord provides comprehensive support in Docker environments across both Linux and Windows platforms. This makes it an excellent choice for deployments on cloud platforms such as Azure, AWS, or any other host compatible with .NET.
@@ -37,14 +37,10 @@ Install-Package IronWord
 ```dockerfile
 # Base image
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM mcr.microsoft.com/dotnet/runtime:8.0-jammy AS base
 WORKDIR /app
 
 # Build phase
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
 WORKDIR /src
@@ -57,14 +53,10 @@ RUN dotnet build "Example.csproj" -c Release -o /app/build
 
 # Publish phase
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM build AS publish
 RUN dotnet publish "Example.csproj" -c Release -o /app/publish
 
 # Setup final stage
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 FROM base AS final
 WORKDIR /app
@@ -77,14 +69,10 @@ ENTRYPOINT ["dotnet", "Example.dll"]
 ```dockerfile
 # Establishing base environment
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM mcr.microsoft.com/dotnet/runtime:6.0-focal AS base
 WORKDIR /app
 
 # Commencing build
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
@@ -97,14 +85,10 @@ RUN dotnet build "Example.csproj" -c Release -o /app/build
 
 # Proceeding to publishing
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM build AS publish
 RUN dotnet publish "Example.csproj" -c Release -o /app/publish
 
 # Final Configuration
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 FROM base AS final
 WORKDIR /app
@@ -145,8 +129,6 @@ For systems using CentOS 7, favor using a CentOS-compatible .NET runtime such as
 ```dockerfile
 # Build stage setup
 
-***Based on <https://ironsoftware.com/get-started/docker/>***
-
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 
@@ -158,8 +140,6 @@ WORKDIR /app/Example
 RUN dotnet publish -c Release -o /out
 
 # Setup runtime environment - CentOS 7
-
-***Based on <https://ironsoftware.com/get-started/docker/>***
 
 FROM mcr.microsoft.com/dotnet/runtime:6.0-centos7 AS runtime
 WORKDIR /app

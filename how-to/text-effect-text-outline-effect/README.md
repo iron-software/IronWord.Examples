@@ -1,6 +1,6 @@
 # Enhancing Text with an Outline Effect
 
-***Based on <https://ironsoftware.com/how-to/text-effect-text-outline-effect/>***
+> Full guide: [Enhancing Text with an Outline Effect](https://ironsoftware.com/how-to/text-effect-text-outline-effect/)
 
 
 The outline effect on text involves adding a distinct, visible border to each character. This effect is not only visually appealing but also enhances the legibility of text, especially against complex backgrounds. Users can tailor this effect by adjusting the color, width, and style of the outline to meet particular design requirements. This technique is widely used across graphic design, typography, and digital creation to give texts a prominent or artistic flair.
@@ -10,7 +10,6 @@ The outline effect on text involves adding a distinct, visible border to each ch
 Effortlessly append a standard outline to your text with IronWord by setting up a `TextStyle` object to utilize `TextOutlineEffect.DefaultEffect`. This method provides a straightforward approach for developers to enhance text appearance promptly.
 
 ```cs
-:title=Effortlessly Add Text Outline
 new IronWord.Models.TextStyle { TextEffect = new IronWord.Models.TextEffect { TextOutlineEffect = IronWord.Models.TextOutlineEffect.DefaultEffect } }
 ```
 

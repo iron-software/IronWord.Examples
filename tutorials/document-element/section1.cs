@@ -5,7 +5,6 @@ namespace IronWord.Examples.Tutorial.DocumentElement
     {
         public static void Run()
         {
-            :title=Quickly Add & Style Text or Images with IronWord
             new WordDocument()
               .AddParagraph(new Paragraph(new TextContent("Hello IronWord!")).AddImage(new ImageContent("pic.png")))
               .SaveAs("output.docx");

@@ -1,6 +1,6 @@
 # How to Replace Text in a Word Document
 
-***Based on <https://ironsoftware.com/how-to/replace-words/>***
+> Full guide: [How to Replace Text in a Word Document](https://ironsoftware.com/how-to/replace-words/)
 
 
 In the realm of document automation, specifically altering text in Word documents, there's a frequent requirement for solutions that facilitate the modification of templates, the updating of reports, or the handling of bulk content. IronWord, a robust C# library, has been crafted to address these needs efficiently and effectively.

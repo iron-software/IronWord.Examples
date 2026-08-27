@@ -1,6 +1,6 @@
 # How To Utilize IronWord on Azure with .NET
 
-***Based on <https://ironsoftware.com/get-started/azure/>***
+> Full guide: [How To Utilize IronWord on Azure with .NET](https://ironsoftware.com/csharp/word/get-started/azure/)
 
 
 IronWord is a robust .NET library designed to programmatically create, edit, and review Word documents. It integrates smoothly with multiple Azure services, including Azure App Services, Azure Functions, and Azure Container Instances.

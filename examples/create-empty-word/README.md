@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/create-empty-word/>***
+> Full guide: [Create empty word](https://ironsoftware.com/csharp/word/examples/create-empty-word/)
 
 ## IronWord: Streamlining Word and DOCX Document Creation
 

@@ -1,6 +1,6 @@
 # Adding a Shadow Effect to Text
 
-***Based on <https://ironsoftware.com/how-to/text-effect-shadow-effect/>***
+> Full guide: [Adding a Shadow Effect to Text](https://ironsoftware.com/how-to/text-effect-shadow-effect/)
 
 
 Applying a shadow effect to text is an effective way to add depth and visual distinction. This technique involves creating a shadow behind the text that is slightly offset, making it appear as if the text is elevated above the background.
@@ -10,7 +10,6 @@ Applying a shadow effect to text is an effective way to add depth and visual dis
 You can quickly apply a shadow effect to text in a Word document using IronWord with a single line of code. This method is perfect for developers seeking immediate results without extensive configuration.
 
 ```cs
-:title=Simplified Shadow Effect Application with IronWord
 new IronWord.WordDocument().AddText("Shadow!").Style = new IronWord.Models.TextStyle { TextEffect = new IronWord.Models.TextEffect { ShadowEffect = IronWord.Models.Shadow.OuterShadow1 } };
 ```
 
