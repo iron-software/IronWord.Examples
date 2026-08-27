@@ -1,3 +1,4 @@
+using IronWord.Models;
 using System.Collections.Generic;
 using IronWord;
 namespace IronWord.Examples.HowTo.TextEffectGradientEffect
