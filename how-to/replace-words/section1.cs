@@ -5,7 +5,7 @@ namespace IronWord.Examples.HowTo.ReplaceWords
     {
         public static void Run()
         {
-            IronWord.Document doc = new IronWord.Document("sample.docx");
+            WordDocument doc = new WordDocument("sample.docx");
             doc.ReplaceText("oldText", "newText");
             doc.SaveAs("updated.docx");
         }

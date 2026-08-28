@@ -15,9 +15,9 @@ namespace IronWord.Examples.HowTo.AddStyleText
             {
                 TextFont = new IronWord.Models.Font()
                 {
-                    FontFamily = "Arial",  // Set font family
-                    FontSize = 24          // Set font size in points
-                }
+                    FontFamily = "Arial"  // Set font family
+                },
+                FontSize = 24             // Set font size in points
             };
             
             Paragraph paragraph = new Paragraph();

@@ -9,7 +9,7 @@ namespace IronWord.Examples.HowTo.ExtractText
             WordDocument apiStatsDoc = new WordDocument("api-statistics.docx");
             
             // Extract text from the 1st table, 4th column and 2nd row
-            string extractedValue = apiStatsDoc.Tables[0].Rows[2].Cells[3].ExtractText();
+            string extractedValue = apiStatsDoc.Tables[0].Rows[2].Cells[3].Value;
             
             // Print extracted value
             Console.WriteLine($"Target success rate: {extractedValue}");

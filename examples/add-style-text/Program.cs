@@ -13,8 +13,8 @@ text.Style = new TextStyle()
 	TextFont = new Font()
 	{
 		FontFamily = "Caveat",
-		FontSize = 72,
 	},
+	FontSize = 72,
 	Color = IronWord.Models.Color.Red,
 	IsBold = true,
 	IsItalic = true,

@@ -18,8 +18,8 @@ namespace IronWord.Examples.Tutorial.DocumentElement
                 TextFont = new Font()
                 {
                     FontFamily = "Caveat",
-                    FontSize = 72,
                 },
+                FontSize = 72,
                 Color = Color.Red,
                 IsBold = true,
                 IsItalic = true,

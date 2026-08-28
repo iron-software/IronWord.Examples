@@ -6,7 +6,7 @@ namespace IronWord.Examples.HowTo.TextEffectTextOutlineEffect
     {
         public static void Run()
         {
-            new IronWord.Models.TextStyle { TextEffect = new IronWord.Models.TextEffect { TextOutlineEffect = IronWord.Models.TextOutlineEffect.DefaultEffect } }
+            var style = new IronWord.Models.TextStyle { TextEffect = new IronWord.Models.TextEffect { TextOutlineEffect = IronWord.Models.TextOutlineEffect.DefaultEffect } };
         }
     }
 }

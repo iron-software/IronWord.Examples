@@ -6,9 +6,12 @@ namespace IronWord.Examples.Tutorial.DocumentElement
     {
         public static void Run()
         {
-            new WordDocument()
-              .AddParagraph(new Paragraph(new TextContent("Hello IronWord!")).AddImage(new ImageContent("pic.png")))
-              .SaveAs("output.docx");
+            Paragraph paragraph = new Paragraph(new TextContent("Hello IronWord!"));
+            paragraph.AddImage(new ImageContent("pic.png"));
+
+            WordDocument doc = new WordDocument();
+            doc.AddParagraph(paragraph);
+            doc.SaveAs("output.docx");
         }
     }
 }

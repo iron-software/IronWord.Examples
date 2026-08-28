@@ -16,12 +16,12 @@ namespace IronWord.Examples.HowTo.ExtractImages
             foreach (var image in images)
             {
                 // Save each image to disk
-                string fileName = $"extracted-image-{count}.png";
-                image.SaveAs(fileName);
+                string fileName = $"extracted-image-{count}.jpg";
+                System.IO.File.WriteAllBytes(fileName, image.Image.ExportBytesAsJpg());
             
                 Console.WriteLine($"Extracted image {count}:");
-                Console.WriteLine($"Width: {image.Width}");
-                Console.WriteLine($"Height: {image.Height}");
+                Console.WriteLine($"Width: {image.Image.Width}");
+                Console.WriteLine($"Height: {image.Image.Height}");
                 Console.WriteLine($"Saved as: {fileName}");
             
                 count++;
