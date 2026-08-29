@@ -7,7 +7,7 @@
 
 To remove watermarks and deployment restrictions in your projects, obtaining an IronWord license key is essential.
 
-You can [purchase a license key here](https://ironsoftware.com/csharp/word/licensing/?utm_source=github) or [register for a free 30-day trial key](https://ironsoftware.com/trial-license?utm_source=github).
+You can [purchase a license key here](https://ironsoftware.com/csharp/word/licensing/?utm_source=github) or [register for a free 30-day trial key](https://ironsoftware.com/csharp/word/?utm_source=github#trial-license).
 
 ---
 
@@ -99,7 +99,7 @@ Kick off your project by following our detailed [IronWord Getting Started Guide]
 
 ## Support and Further Assistance
 
-Obtaining a license for commercial usage requires either a purchase or a trial registration, which you can address [here](https://ironsoftware.com/csharp/word/licensing/?utm_source=github) and [here](https://ironsoftware.com/trial-license?utm_source=github), respectively.
+Obtaining a license for commercial usage requires either a purchase or a trial registration, which you can address [here](https://ironsoftware.com/csharp/word/licensing/?utm_source=github) and [here](https://ironsoftware.com/csharp/word/?utm_source=github#trial-license), respectively.
 
 Explore a variety of coding examples, detailed tutorials, and comprehensive docs in our [IronWord specific section](https://ironsoftware.com/csharp/word/?utm_source=github).
 
