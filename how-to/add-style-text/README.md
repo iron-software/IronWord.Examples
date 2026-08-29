@@ -1,6 +1,6 @@
 # Enhancing Text Appearance in DOCX with C&#35; Using IronWord
 
-> Full guide: [Enhancing Text Appearance in DOCX with C&#35; Using IronWord](https://ironsoftware.com/how-to/add-style-text/)
+> Full guide: [Enhancing Text Appearance in DOCX with C&#35; Using IronWord](https://ironsoftware.com/csharp/word/how-to/add-style-text/)
 
 When crafting professional and visually appealing documents, the ability to style text is crucial. IronWord provides an extensive API for rich text formatting in DOCX files.
 

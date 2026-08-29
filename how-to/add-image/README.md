@@ -1,6 +1,6 @@
 # How to Insert an Image into a DOCX File
 
-> Full guide: [How to Insert an Image into a DOCX File](https://ironsoftware.com/how-to/add-image/)
+> Full guide: [How to Insert an Image into a DOCX File](https://ironsoftware.com/csharp/word/how-to/add-image/)
 
 Integrating images into a Word document (.docx) can significantly enhance its visual appeal and elucidate textual content, such as a sentence or a paragraph. Utilizing IronWord, a C# library tailored for modifying DOCX files, this guide will demonstrate the straightforward process of embedding images within a document in a .NET environment.
 

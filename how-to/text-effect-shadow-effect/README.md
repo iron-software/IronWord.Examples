@@ -1,6 +1,6 @@
 # Adding a Shadow Effect to Text
 
-> Full guide: [Adding a Shadow Effect to Text](https://ironsoftware.com/how-to/text-effect-shadow-effect/)
+> Full guide: [Adding a Shadow Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-shadow-effect/)
 
 
 Applying a shadow effect to text is an effective way to add depth and visual distinction. This technique involves creating a shadow behind the text that is slightly offset, making it appear as if the text is elevated above the background.

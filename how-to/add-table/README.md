@@ -1,6 +1,6 @@
 # How to Incorporate Tables into DOCX Documents
 
-> Full guide: [How to Incorporate Tables into DOCX Documents](https://ironsoftware.com/how-to/add-table/)
+> Full guide: [How to Incorporate Tables into DOCX Documents](https://ironsoftware.com/csharp/word/how-to/add-table/)
 
 
 A table, essentially a structured grid, comprises rows and columns that intersect to form cells. These cells can house a variety of data such as text and numbers, facilitating organized data presentation, schedule creation, and more.

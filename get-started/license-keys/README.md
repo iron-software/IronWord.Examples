@@ -1,6 +1,6 @@
 # Implementing IronWord License Keys
 
-> Full guide: [Implementing IronWord License Keys](https://ironsoftware.com/get-started/license-keys/)
+> Full guide: [Implementing IronWord License Keys](https://ironsoftware.com/csharp/barcode/get-started/license-keys/)
 
 
 ## Acquiring a License Key

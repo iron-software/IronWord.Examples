@@ -1,6 +1,6 @@
 # How to Insert Text into a DOCX File Using IronWord
 
-> Full guide: [How to Insert Text into a DOCX File Using IronWord](https://ironsoftware.com/how-to/add-text/)
+> Full guide: [How to Insert Text into a DOCX File Using IronWord](https://ironsoftware.com/csharp/ppt/how-to/add-text/)
 
 Incorporating automated text entry into applications is crucial for creating reports, building templates, and populating data dynamically within applications.
 

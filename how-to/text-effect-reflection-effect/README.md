@@ -1,6 +1,6 @@
 # How to Add Reflection Effect to Text
 
-> Full guide: [How to Add Reflection Effect to Text](https://ironsoftware.com/how-to/text-effect-reflection-effect/)
+> Full guide: [How to Add Reflection Effect to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-reflection-effect/)
 
 
 Creating a reflection effect for text involves producing a mirrored image of the text below it, akin to how it would appear reflected on a surface. This can lend a sense of depth and enhance the visual impact of the text in your design.
