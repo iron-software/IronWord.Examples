@@ -11,11 +11,14 @@ To begin, you'll need the [AWSSDK.S3 NuGet package](https://www.nuget.org/packag
 
 ## Configuring IronWord ZIP Package for AWS Lambda
 
-AWS Lambda operates with a mostly read-only filesystem, allowing write access only to the `/tmp/` directory. It’s crucial to adjust the IronWord configuration to utilize this directory for its runtime files:
+AWS Lambda's filesystem is read-only except for the `/tmp/` folder, so any Word document your function creates locally before uploading to S3 must be written there. IronWord reads from anywhere; only writes are constrained, so there is no library setting to change — build the output path under `/tmp/`:
 
 ```csharp
-var awsTmpDirectory = @"/tmp/";
-IronSoftware.Word.Installation.DeploymentPath = awsTmpDirectory;
+var awsTmpPath = @"/tmp/";
+License.LicenseKey = "YOUR-LICENSE-KEY";
+
+var localFilePath = Path.Combine(awsTmpPath, Guid.NewGuid() + ".docx");
+Console.WriteLine($"Documents will be written to {localFilePath}");
 ```
 
 ## Setting Up IronWord on AWS
