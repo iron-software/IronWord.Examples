@@ -159,7 +159,7 @@ public partial class MainPage : ContentPage
 
 Your project directory should now appear as follows:
 
-```
+```text
 IronWordMauiIOS/
 │
 ├── MainPage.xaml              ← Layout interface

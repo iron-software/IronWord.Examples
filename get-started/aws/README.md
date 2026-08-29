@@ -42,7 +42,7 @@ Install-Package IronWord
 
 Adjust your project's Dockerfile to deploy with the .NET 8 Lambda base image and ensure your build artifacts are copied over:
 
-```
+```dockerfile
 FROM public.ecr.aws/lambda/dotnet:8
 
 RUN dnf update -y
