@@ -125,7 +125,7 @@ class Program
 
 ## Licensing & Support Available
 
-**IronWord** offers both commercial licenses and trial versions which can be accessed [here](https://ironsoftware.com/csharp/word/docs/trial-license?utm_source=github).
+**IronWord** offers both commercial licenses and trial versions which can be accessed [here](https://ironsoftware.com/csharp/word/docs/?utm_source=github#trial-license).
 
 For additional information about Iron Software, visit our website at: <https://ironsoftware.com/>. For further assistance and queries, you can [contact our team](https://ironsoftware.com/csharp/word/docs/?utm_source=github#live-chat-support).
 
