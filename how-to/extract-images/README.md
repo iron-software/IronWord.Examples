@@ -1,15 +1,12 @@
 # Extracting Images from DOCX Files Using C# and IronWord
 
-***Based on <https://ironsoftware.com/how-to/extract-images/>***
-
+> Full guide: [Extracting Images from DOCX Files Using C# and IronWord](https://ironsoftware.com/csharp/word/how-to/extract-images/)
 
 IronWord simplifies the task of extracting images from Word documents, a frequent need in content migration, media management, and automated document handling. The library provides powerful tools that enable users to save, analyze, or recycle embedded images by exposing their properties like size and format.
 
 The `ExtractImages()` method is a convenient approach to retrieve all images from a document along with their metadata, which is essential for further manipulations and processing.
 
 <h3>Getting Started with IronWord</h3>
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
 
 ---
 

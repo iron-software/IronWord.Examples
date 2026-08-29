@@ -1,4 +1,5 @@
 ﻿using IronWord;
+using IronWord;
 using IronWord.Models;
 
 // Create new Word document

@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/edit-text/>***
+> Full guide: [Edit text](https://ironsoftware.com/csharp/word/examples/edit-text/)
 
 The "Edit Text" function in IronWord equips developers with the capability to modify text in an existing DOCX file. By utilizing the `Paragraphs` collection, developers can pinpoint and alter the `Text` objects within paragraphs using the `ReplaceText` method. This functionality is essential for scenarios that require dynamic text updates such as modifying report sections, replacing placeholder text, or amending content based on external data or user inputs.
 

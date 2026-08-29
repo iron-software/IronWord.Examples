@@ -1,3 +1,4 @@
+using IronWord.Models;
 using System;
 using IronWord;
 namespace IronWord.Examples.Tutorial.DocumentElement
@@ -12,7 +13,7 @@ namespace IronWord.Examples.Tutorial.DocumentElement
             TextContent content = doc.Paragraphs[0].Texts[0];
             
             // This will show the R G B A of the themecolor
-            var filledColor = content.FillColor;
+            var filledColor = content.Color;
             
             // Print the filled color variable to the console
             Console.WriteLine(filledColor);

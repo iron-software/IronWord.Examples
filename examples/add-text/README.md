@@ -1,9 +1,5 @@
-***Based on <https://ironsoftware.com/examples/add-text/>***
+> Full guide: [Add text](https://ironsoftware.com/csharp/word/examples/add-text/)
 
-Here's a paraphrased version of the article text provided:
-
----
-
-This task requires importing an existing Word document, inserting specific text into it, and then exporting the revised document. Below you'll find the enhanced and corrected code along with explanations for each part:
+This task loads an existing Word document, inserts text into it, and saves the result. The code below walks through each step:
 
 [Discover the Document Elements with IronWord Tutorial](https://ironsoftware.com/csharp/word/tutorials/document-element/)

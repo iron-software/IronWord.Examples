@@ -1,3 +1,4 @@
+using IronWord.Models;
 using IronWord.Models.Enums;
 using IronWord;
 namespace IronWord.Examples.Tutorial.DocumentElement
@@ -11,7 +12,8 @@ namespace IronWord.Examples.Tutorial.DocumentElement
             
             // Configure image
             ImageContent image = new ImageContent("image.jpg");
-            image.WrapText = WrapText.Square;
+            image.TextWrapBehavior = new IronSoftware.Abstractions.Word.TextWrapSquare(
+                0, 0, 0, 0, IronSoftware.Abstractions.Word.TextWrapSide.Both);
             image.Width = 100;
             image.Height = 100;
             image.DistanceFromTop = 50;

@@ -1,3 +1,4 @@
+using IronWord.Models;
 using IronWord.Models.Enums;
 using IronWord;
 namespace IronWord.Examples.Tutorial.DocumentElement
@@ -17,8 +18,8 @@ namespace IronWord.Examples.Tutorial.DocumentElement
                 TextFont = new Font()
                 {
                     FontFamily = "Caveat",
-                    FontSize = 72,
                 },
+                FontSize = 72,
                 Color = Color.Red,
                 IsBold = true,
                 IsItalic = true,

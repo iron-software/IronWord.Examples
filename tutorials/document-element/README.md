@@ -1,16 +1,15 @@
 # Document Element Tutorial
 
-***Based on <https://ironsoftware.com/tutorials/document-element/>***
+> Full guide: [Document Element Tutorial](https://ironsoftware.com/csharp/word/tutorials/document-element/)
 
 
-IronWord is a robust library designed for .NET C# developers. It facilitates the integration of Word document operations—such as creation, reading, and editing—directly into their software applications. Within a Word document, document elements serve as the foundational components that compile the document's content.
+IronWord is a library designed for .NET C# developers. It facilitates the integration of Word document operations—such as creation, reading, and editing—directly into their software applications. Within a Word document, document elements serve as the foundational components that compile the document's content.
 
-*as-heading:2(Quickstart: Combine Styled Text and an Image Seamlessly)*
+## Quickstart: Combine Styled Text and an Image
 
 Using IronWord, you can swiftly incorporate rich content. This allows you to merge styled text with an embedded image within a single paragraph, all while saving the document through an efficient, fluent code block. This is ideal for developers eager to begin without unnecessary steps.
 
 ```cs
-:title=Easily Combine Text and Images using IronWord
 new WordDocument()
   .AddParagraph(new Paragraph(new TextContent("Welcome to IronWord!")).AddImage(new ImageContent("https://ironsoftware.com/pic.png")))
   .SaveAs("example.docx");
@@ -21,15 +20,15 @@ new WordDocument()
 ## Table of Contents
 
 - **Text Handling**
-  - [Text Operations](#anchor-text-content) (Addition, Appending & Segmentation)
-  - [Apply Styling](#anchor-set-styling) (Typeface & Size, Color, Bold & Italic, Line-through, Underline, Superscript & Subscript)
-  - [Image Embedding](#anchor-embed-images)
+  - [Text Operations](#text-operations) (Addition, Appending & Segmentation)
+  - [Apply Styling](#apply-styling) (Typeface & Size, Color, Bold & Italic, Line-through, Underline, Superscript & Subscript)
+  - [Image Embedding](#image-embedding)
 - **Image Processing**
-  - [Image Retrieval](#anchor-load-image) (File & FileStream)
-  - [Adjust Text Wrapping](#anchor-configure-image)
-  - [Modify Dimensions](#anchor-configure-image) (Width & Height)
-  - [Alter Position](#anchor-configure-image)
-  - [Set Margin](#anchor-configure-image)
+  - [Image Retrieval](#load-image) (File & FileStream)
+  - [Adjust Text Wrapping](#configure-image)
+  - [Modify Dimensions](#configure-image) (Width & Height)
+  - [Alter Position](#configure-image)
+  - [Set Margin](#configure-image)
 
 ## Text Blocks
 

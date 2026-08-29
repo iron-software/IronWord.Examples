@@ -1,11 +1,11 @@
 # Getting Started with IronWord
 
-***Based on <https://ironsoftware.com/docs/docs/>***
+> Docs: [IronWord documentation](https://ironsoftware.com/csharp/word/docs/)
 
 
 ## IronWord: Word Document Library for .NET
 
-**IronWord** is a Word document library crafted by Iron Software. It specializes in offering robust tools for manipulating Word documents within .NET applications.
+**IronWord** is a Word document library crafted by Iron Software. It specializes in offering tools for manipulating Word documents within .NET applications.
 
 - Load, edit, and save Word and Docx files.
 - `PageSetup`: Adjust paper size, orientation, margins, and background color.

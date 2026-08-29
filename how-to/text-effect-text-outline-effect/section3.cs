@@ -1,3 +1,4 @@
+using IronWord.Models;
 using IronWord.Models.Enums;
 using IronWord;
 namespace IronWord.Examples.HowTo.TextEffectTextOutlineEffect

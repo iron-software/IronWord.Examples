@@ -1,9 +1,9 @@
 # How to Replace Text in a Word Document
 
-***Based on <https://ironsoftware.com/how-to/replace-words/>***
+> Full guide: [How to Replace Text in a Word Document](https://ironsoftware.com/csharp/word/how-to/replace-words/)
 
 
-In the realm of document automation, specifically altering text in Word documents, there's a frequent requirement for solutions that facilitate the modification of templates, the updating of reports, or the handling of bulk content. IronWord, a robust C# library, has been crafted to address these needs efficiently and effectively.
+In document automation, specifically altering text in Word documents, there's a frequent requirement for solutions that facilitate the modification of templates, the updating of reports, or the handling of bulk content. IronWord, a C# library, has been crafted to address these needs efficiently and effectively.
 
 IronWord stands out by allowing direct manipulation of Word documents without the dependency on Microsoft Office Interop. This independence from having Word installed on your server not only accelerates the process but also enhances reliability and scalability, especially crucial for back-end operations and web applications.
 
@@ -11,7 +11,7 @@ This tutorial provides a practical walkthrough with code examples, showing how s
 
 ## Quickstart: Swift Text Replacement in Word Documents 
 
-Here’s a brief tutorial to demonstrate how you can effortlessly modify text in a Word document using IronWord. With just a few lines of C# code, anyone can open a `.DOCX` file, alter specific text, and save the revised document. This streamlined method facilitates document automation in environments where Microsoft Office Interop is not an option, perfect for backend systems and web apps.
+Here’s a brief tutorial to demonstrate how you can modify text in a Word document using IronWord. With just a few lines of C# code, anyone can open a `.DOCX` file, alter specific text, and save the revised document. This simplified method facilitates document automation in environments where Microsoft Office Interop is not an option, perfect for backend systems and web apps.
 
 ```csharp
 // Simple Text Replacement Example

@@ -1,15 +1,8 @@
 # How to Insert an Image into a DOCX File
 
-***Based on <https://ironsoftware.com/how-to/add-image/>***
-
+> Full guide: [How to Insert an Image into a DOCX File](https://ironsoftware.com/csharp/word/how-to/add-image/)
 
 Integrating images into a Word document (.docx) can significantly enhance its visual appeal and elucidate textual content, such as a sentence or a paragraph. Utilizing IronWord, a C# library tailored for modifying DOCX files, this guide will demonstrate the straightforward process of embedding images within a document in a .NET environment.
-
-### Explore IronWord
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
-
----
 
 ## Image Insertion Process
 
@@ -47,7 +40,7 @@ doc.SaveAs("inserted-image.docx");
 
 ## Adding Image via Stream
 
-Adding images from local directories or static URLs is efficiently managed with the previously illustrated method. For images protected by secure APIs that require authentication, utilizing the `Stream` method is the recommended approach. In the following example, an HTTP client sends authorization tokens, retrieves the image as an authenticated stream, and seamlessly adds it to the document before the final export.
+Adding images from local directories or static URLs is efficiently managed with the previously illustrated method. For images protected by secure APIs that require authentication, utilizing the `Stream` method is the recommended approach. In the following example, an HTTP client sends authorization tokens, retrieves the image as an authenticated stream, and adds it to the document before the final export.
 
 ```csharp
 using IronWord;

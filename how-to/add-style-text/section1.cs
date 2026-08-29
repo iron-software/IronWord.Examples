@@ -1,3 +1,5 @@
+using IronWord.Models;
+using IronWord.Models.Enums;
 using IronWord;
 namespace IronWord.Examples.HowTo.AddStyleText
 {
@@ -18,8 +20,8 @@ namespace IronWord.Examples.HowTo.AddStyleText
                 TextFont = new Font()
                 {
                     FontFamily = "Calibri", // Text Font is "Calibri"
-                    FontSize = 24, // Text Size is 24
                 },
+                FontSize = 24, // Text Size is 24
                 Color = Color.Red, // Set text color to red
                 IsBold = true,     // Make text bold
                 IsItalic = true,   // Make text italic

@@ -1,15 +1,12 @@
 # Extract Text from DOCX with C# using IronWord
 
-***Based on <https://ironsoftware.com/how-to/extract-text/>***
-
+> Full guide: [Extract Text from DOCX with C# using IronWord](https://ironsoftware.com/csharp/word/how-to/extract-text/)
 
 Retrieving text from DOCX documents is a crucial task in document management and data extraction. IronWord simplifies this process by allowing developers to easily extract text from DOCX files, including paragraphs, tables, and other elements with programmatic ease.
 
 This guide showcases the use of the `ExtractText()` method, highlighting its effectiveness in pulling data from various components of a document.
 
 <h3>Getting Started with IronWord</h3>
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
 
 ---
 

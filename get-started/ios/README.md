@@ -1,15 +1,15 @@
-# Harnessing IronWord for iOS Development
+# Using IronWord for iOS Development
 
-***Based on <https://ironsoftware.com/get-started/ios/>***
+> Full guide: [Using IronWord for iOS Development](https://ironsoftware.com/csharp/word/get-started/ios/)
 
 
-Developing native applications across multiple platforms like Android, iOS, Windows, and macOS is streamlined through .NET MAUI (Multi-platform App UI), which leverages a unified .NET codebase. Utilizing IronWord enhances .NET developers' capabilities to seamlessly create, read, manipulate, and store Microsoft Word (.docx) documents. This functionality is fully supported across all platforms without the need for Microsoft Office, making IronWord a universally applicable solution.
+.NET MAUI (Multi-platform App UI) builds native applications for Android, iOS, Windows, and macOS from one .NET codebase. IronWord creates, reads, edits, and saves Microsoft Word (.docx) documents on each of those platforms, with no installed copy of Microsoft Office.
 
-IronWord integrates seamlessly into iOS as part of the .NET MAUI shared codebase. Its implementation requires only the standard IronWord NuGet package, eliminating the need for any platform-specific variations.
+On iOS, IronWord is referenced from the .NET MAUI shared codebase using the standard IronWord NuGet package. There is no iOS-specific variant.
 
 ## Implementing the IronWord NuGet Package
 
-IronWord is readily accessible as a versatile cross-platform NuGet package, ensuring compatibility with all principal .NET MAUI platforms, including iOS.
+IronWord ships as a cross-platform NuGet package covering every major .NET MAUI platform, iOS included.
 
 ```shell
 Install-Package IronWord
@@ -159,7 +159,7 @@ public partial class MainPage : ContentPage
 
 Your project directory should now appear as follows:
 
-```
+```text
 IronWordMauiIOS/
 │
 ├── MainPage.xaml              ← Layout interface

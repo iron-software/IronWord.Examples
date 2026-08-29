@@ -1,4 +1,4 @@
-***Based on <https://ironsoftware.com/examples/extract-text/>***
+> Full guide: [Extract text](https://ironsoftware.com/csharp/word/examples/extract-text/)
 
 Extracting an extensive amount of text from documents can often be a tedious and lengthy process, particularly when faced with copious amounts of paragraphs and tables. Fortunately, the `ExtractText` method from IronWord offers a timely solution. This method allows developers to efficiently extract a defined amount of text from a document, removing the need for repetitive looping and facilitating easier access to the `Text` property. By using this method, developers can enhance their productivity and conserve valuable time.
 

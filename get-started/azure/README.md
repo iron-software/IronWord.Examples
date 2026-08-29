@@ -1,9 +1,9 @@
 # How To Utilize IronWord on Azure with .NET
 
-***Based on <https://ironsoftware.com/get-started/azure/>***
+> Full guide: [How To Utilize IronWord on Azure with .NET](https://ironsoftware.com/csharp/word/get-started/azure/)
 
 
-IronWord is a robust .NET library designed to programmatically create, edit, and review Word documents. It integrates smoothly with multiple Azure services, including Azure App Services, Azure Functions, and Azure Container Instances.
+IronWord is a .NET library designed to programmatically create, edit, and review Word documents. It integrates smoothly with multiple Azure services, including Azure App Services, Azure Functions, and Azure Container Instances.
 
 ## Setting up IronWord
 
@@ -27,13 +27,13 @@ IronWord is readily compatible with the frameworks often used in Azure-hosted en
 - .NET Core 3.1
 - .NET Standard 2.1
 
-These options ensure that IronWord can be deployed across different Azure offerings like App Services, Azure Functions, and Docker containers seamlessly.
+These options ensure that IronWord can be deployed across different Azure offerings like App Services, Azure Functions, and Docker containers.
 
 ## Deploying IronWord in Docker Containers on Azure
 
 ### Using IronWord in Containerized Environments
 
-Deploying IronWord within a Docker container leveraging Azure Container Instances (ACI) or Azure Kubernetes Service (AKS) provides enhanced control over the environment, allowing configurations such as:
+Deploying IronWord within a Docker container using Azure Container Instances (ACI) or Azure Kubernetes Service (AKS) provides enhanced control over the environment, allowing configurations such as:
 
 - Pre-loading necessary templates or resources
 - Customizing document processing settings
