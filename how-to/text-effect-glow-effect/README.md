@@ -2,7 +2,6 @@
 
 > Full guide: [Enhancing Text with a Glow Effect](https://ironsoftware.com/how-to/text-effect-glow-effect/)
 
-
 A glow effect on text equips it with a luminous aura, making it seem as though the text is backlit. This can vastly improve readability while simultaneously catching the viewer's eye.
 
 ## Quickstart: Swiftly Apply Glow Effect to Text
@@ -14,8 +13,6 @@ someTextElement.Style.TextEffect = new IronWord.Models.TextEffect { GlowEffect =
 ```
 
 ### Begin with IronWord
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
 
 ## Implementing the Glow Effect
 

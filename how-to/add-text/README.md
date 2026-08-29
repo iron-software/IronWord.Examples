@@ -2,16 +2,9 @@
 
 > Full guide: [How to Insert Text into a DOCX File Using IronWord](https://ironsoftware.com/how-to/add-text/)
 
-
 Incorporating automated text entry into applications is crucial for creating reports, building templates, and populating data dynamically within applications.
 
 This guide will teach you how to seamlessly add text to a DOCX file using IronWord.
-
-### Start Your Journey with IronWord
-
-!!!--LIBRARY_START_TRIAL_BLOCK--!!!
-
----
 
 ## Inserting Text
 
@@ -35,7 +28,6 @@ document.SaveAs("SimpleTextInsertion.docx");
          <img src="https://ironsoftware.com/static-assets/word/how-to/add-text/add-text.webp" alt="Inserting text" class="img-responsive add-shadow">
     </div>
 </div>
-
 
 ## Text Insertion Within a Paragraph
 

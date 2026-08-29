@@ -20,15 +20,15 @@ new WordDocument()
 ## Table of Contents
 
 - **Text Handling**
-  - [Text Operations](#anchor-text-content) (Addition, Appending & Segmentation)
-  - [Apply Styling](#anchor-set-styling) (Typeface & Size, Color, Bold & Italic, Line-through, Underline, Superscript & Subscript)
-  - [Image Embedding](#anchor-embed-images)
+  - [Text Operations](#text-operations) (Addition, Appending & Segmentation)
+  - [Apply Styling](#apply-styling) (Typeface & Size, Color, Bold & Italic, Line-through, Underline, Superscript & Subscript)
+  - [Image Embedding](#image-embedding)
 - **Image Processing**
-  - [Image Retrieval](#anchor-load-image) (File & FileStream)
-  - [Adjust Text Wrapping](#anchor-configure-image)
-  - [Modify Dimensions](#anchor-configure-image) (Width & Height)
-  - [Alter Position](#anchor-configure-image)
-  - [Set Margin](#anchor-configure-image)
+  - [Image Retrieval](#load-image) (File & FileStream)
+  - [Adjust Text Wrapping](#configure-image)
+  - [Modify Dimensions](#configure-image) (Width & Height)
+  - [Alter Position](#configure-image)
+  - [Set Margin](#configure-image)
 
 ## Text Blocks
 
