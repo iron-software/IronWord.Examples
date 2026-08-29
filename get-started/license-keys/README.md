@@ -1,13 +1,13 @@
 # Implementing IronWord License Keys
 
-> Full guide: [Implementing IronWord License Keys](https://ironsoftware.com/csharp/barcode/get-started/license-keys/)
+> Full guide: [Implementing IronWord License Keys](https://ironsoftware.com/csharp/barcode/get-started/license-keys/?utm_source=github)
 
 
 ## Acquiring a License Key
 
 To remove watermarks and deployment restrictions in your projects, obtaining an IronWord license key is essential.
 
-You can [purchase a license key here](https://ironsoftware.com/csharp/word/licensing/) or [register for a free 30-day trial key](https://ironsoftware.com/trial-license).
+You can [purchase a license key here](https://ironsoftware.com/csharp/word/licensing/?utm_source=github) or [register for a free 30-day trial key](https://ironsoftware.com/trial-license?utm_source=github).
 
 ---
 
@@ -43,7 +43,7 @@ Be aware of a licensing issue with IronWord releases prior to [version 2024.3.5]
 - **ASP.NET** projects
 - **.NET Framework version >= 4.6.2**
 
-Licenses specified in `Web.config` may not be recognized. For troubleshooting, refer to our [Web.config Licensing Issues guide](https://ironsoftware.com/csharp/word/troubleshooting/license-key-web.config/).
+Licenses specified in `Web.config` may not be recognized. For troubleshooting, refer to our [Web.config Licensing Issues guide](https://ironsoftware.com/csharp/word/troubleshooting/license-key-web.config/?utm_source=github).
 
 Confirm licensing with `IronWord.License.IsLicensed` to ensure it returns `true`.
 
@@ -93,14 +93,14 @@ A return value of **True** indicates a valid key, ready for use with IronWord. A
 
 ## Step 4: Starting Your Project with IronWord
 
-Kick off your project by following our detailed [IronWord Getting Started Guide](https://ironsoftware.com/csharp/word/docs/).
+Kick off your project by following our detailed [IronWord Getting Started Guide](https://ironsoftware.com/csharp/word/docs/?utm_source=github).
 
 ---
 
 ## Support and Further Assistance
 
-Obtaining a license for commercial usage requires either a purchase or a trial registration, which you can address [here](https://ironsoftware.com/csharp/word/licensing/) and [here](https://ironsoftware.com/trial-license), respectively.
+Obtaining a license for commercial usage requires either a purchase or a trial registration, which you can address [here](https://ironsoftware.com/csharp/word/licensing/?utm_source=github) and [here](https://ironsoftware.com/trial-license?utm_source=github), respectively.
 
-Explore a variety of coding examples, detailed tutorials, and comprehensive docs in our [IronWord specific section](https://ironsoftware.com/csharp/word/).
+Explore a variety of coding examples, detailed tutorials, and comprehensive docs in our [IronWord specific section](https://ironsoftware.com/csharp/word/?utm_source=github).
 
 For queries, contact us directly at <support@ironsoftware.com>.

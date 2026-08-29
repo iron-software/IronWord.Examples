@@ -1,6 +1,6 @@
 # How to Replace Text in a Word Document
 
-> Full guide: [How to Replace Text in a Word Document](https://ironsoftware.com/csharp/word/how-to/replace-words/)
+> Full guide: [How to Replace Text in a Word Document](https://ironsoftware.com/csharp/word/how-to/replace-words/?utm_source=github)
 
 
 In document automation, specifically altering text in Word documents, there's a frequent requirement for solutions that facilitate the modification of templates, the updating of reports, or the handling of bulk content. IronWord, a C# library, has been crafted to address these needs efficiently and effectively.
@@ -30,7 +30,7 @@ In IronWord, indexation starts from zero for all object lists.
 
 ### Input
 
-In this example, we’ll work with this [sample Word document](https://ironsoftware.com/static-assets/word/how-to/replace-words/sample.docx) which consists of two paragraphs containing the text "old text".
+In this example, we’ll work with this [sample Word document](https://ironsoftware.com/static-assets/word/how-to/replace-words/sample.docx?utm_source=github) which consists of two paragraphs containing the text "old text".
 
 <div style="text-align: center;">
    <img src="https://ironsoftware.com/static-assets/word/how-to/replace-words/sample-input.webp" alt="Sample Docx" style="max-width: 100%; box-shadow: 0px 2px 5px rgba(0,0,0,0.1);">
@@ -59,7 +59,7 @@ doc.SaveAs("updated.docx");
    <img src="https://ironsoftware.com/static-assets/word/how-to/replace-words/updated-output.webp" alt="Output Docx" style="max-width: 100%; box-shadow: 0px 2px 5px rgba(0,0,0,0.1);">
 </div>
 
-In the [modified document](https://ironsoftware.com/static-assets/word/how-to/replace-words/updated.docx), the first paragraph reflects the new text while the second is left unchanged.
+In the [modified document](https://ironsoftware.com/static-assets/word/how-to/replace-words/updated.docx?utm_source=github), the first paragraph reflects the new text while the second is left unchanged.
 
 ## Replacing Multiple Text Instances
 
@@ -94,7 +94,7 @@ doc.SaveAs("updated.docx");
    <img src="https://ironsoftware.com/static-assets/word/how-to/replace-words/updated-multiple-output.webp" alt="Output Multiple Docx" style="max-width: 100%; box-shadow: 0px 2px 5px rgba(0,0,0,0.1);">
 </div>
 
-The [final document](https://ironsoftware.com/static-assets/word/how-to/replace-words/updated.docx) displays that both paragraphs now contain "new text".
+The [final document](https://ironsoftware.com/static-assets/word/how-to/replace-words/updated.docx?utm_source=github) displays that both paragraphs now contain "new text".
 
 #### Finding Text
 

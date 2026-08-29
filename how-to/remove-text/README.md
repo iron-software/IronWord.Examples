@@ -1,6 +1,6 @@
 # Removing Text from DOCX in C#
 
-> Full guide: [Removing Text from DOCX in C#](https://ironsoftware.com/csharp/word/how-to/remove-text/)
+> Full guide: [Removing Text from DOCX in C#](https://ironsoftware.com/csharp/word/how-to/remove-text/?utm_source=github)
 
 Extracting text from DOCX files is an essential task in document management, allowing developers to neatly redact or clean up contents from Word documents. This guide will cover several techniques to strip paragraphs, text runs, and diverse elements using IronWord, all while preserving the document's overall structure.
 

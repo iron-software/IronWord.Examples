@@ -1,5 +1,5 @@
-> Full guide: [Add list](https://ironsoftware.com/csharp/word/examples/add-list/)
+> Full guide: [Add list](https://ironsoftware.com/csharp/word/examples/add-list/?utm_source=github)
 
 This sample demonstrates how easily you can create a well-organized Word document featuring a multi-tiered list utilizing the IronWord library in C#.
 
-[Explore Document Elements with IronWord](https://ironsoftware.com/csharp/word/tutorials/document-element/)
+[Explore Document Elements with IronWord](https://ironsoftware.com/csharp/word/tutorials/document-element/?utm_source=github)

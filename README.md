@@ -1,6 +1,6 @@
 # IronWord.Examples
 
-Runnable C# examples for [IronWord](https://ironsoftware.com/csharp/word/), a .NET library for creating, reading, and editing DOCX files without Microsoft Word or Office Interop.
+Runnable C# examples for [IronWord](https://ironsoftware.com/csharp/word/?utm_source=github), a .NET library for creating, reading, and editing DOCX files without Microsoft Word or Office Interop.
 
 ## Install
 
@@ -52,15 +52,15 @@ Each folder contains a self-contained .NET project you can open and run:
 
 ## Platform support
 
-.NET 10, 9, 8, 7, 6, 5, .NET Core 2x/3x, .NET Standard 2, and .NET Framework 4.6.2+. Windows, macOS, Linux, Docker, Azure, and AWS. See the [installation docs](https://ironsoftware.com/csharp/word/docs/) for environment-specific notes.
+.NET 10, 9, 8, 7, 6, 5, .NET Core 2x/3x, .NET Standard 2, and .NET Framework 4.6.2+. Windows, macOS, Linux, Docker, Azure, and AWS. See the [installation docs](https://ironsoftware.com/csharp/word/docs/?utm_source=github) for environment-specific notes.
 
 ## Documentation and support
 
-- Full documentation: [ironsoftware.com/csharp/word/docs](https://ironsoftware.com/csharp/word/docs/)
-- API reference: [ironsoftware.com/csharp/word/object-reference/api](https://ironsoftware.com/csharp/word/object-reference/api/)
+- Full documentation: [ironsoftware.com/csharp/word/docs](https://ironsoftware.com/csharp/word/docs/?utm_source=github)
+- API reference: [ironsoftware.com/csharp/word/object-reference/api](https://ironsoftware.com/csharp/word/object-reference/api/?utm_source=github)
 - Issues with these examples: file directly on this repository
 - Product support: [support@ironsoftware.com](mailto:support@ironsoftware.com)
 
 ## About
 
-This repository is maintained by [Iron Software](https://ironsoftware.com/). IronWord is a commercial library — see [licensing](https://ironsoftware.com/csharp/word/licensing/) for terms and trial details.
+This repository is maintained by [Iron Software](https://ironsoftware.com/?utm_source=github). IronWord is a commercial library — see [licensing](https://ironsoftware.com/csharp/word/licensing/?utm_source=github) for terms and trial details.

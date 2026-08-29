@@ -1,6 +1,6 @@
 # Getting Started with IronWord
 
-> Docs: [IronWord documentation](https://ironsoftware.com/csharp/word/docs/)
+> Docs: [IronWord documentation](https://ironsoftware.com/csharp/word/docs/?utm_source=github)
 
 
 ## IronWord: Word Document Library for .NET
@@ -125,9 +125,9 @@ class Program
 
 ## Licensing & Support Available
 
-**IronWord** offers both commercial licenses and trial versions which can be accessed [here](https://ironsoftware.com/csharp/word/docs/trial-license).
+**IronWord** offers both commercial licenses and trial versions which can be accessed [here](https://ironsoftware.com/csharp/word/docs/trial-license?utm_source=github).
 
-For additional information about Iron Software, visit our website at: <https://ironsoftware.com/>. For further assistance and queries, you can [contact our team](https://www.ironsoftware.com/csharp/word/docs/#live-chat-support).
+For additional information about Iron Software, visit our website at: <https://ironsoftware.com/>. For further assistance and queries, you can [contact our team](https://www.ironsoftware.com/csharp/word/docs/?utm_source=github#live-chat-support).
 
 ### Support from Iron Software
 

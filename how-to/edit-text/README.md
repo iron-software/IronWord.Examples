@@ -1,6 +1,6 @@
 # How to Modify Text in Word Documents Using C#
 
-> Full guide: [How to Modify Text in Word Documents Using C#](https://ironsoftware.com/csharp/word/how-to/edit-text/)
+> Full guide: [How to Modify Text in Word Documents Using C#](https://ironsoftware.com/csharp/word/how-to/edit-text/?utm_source=github)
 
 Modifying text in Word documents is essential for updating content and managing document revisions. IronWord allows you to directly manipulate the text within paragraph runs, enabling precise edits to DOCX files programmatically.
 
