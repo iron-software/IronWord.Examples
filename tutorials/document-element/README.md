@@ -3,9 +3,9 @@
 > Full guide: [Document Element Tutorial](https://ironsoftware.com/tutorials/document-element/)
 
 
-IronWord is a robust library designed for .NET C# developers. It facilitates the integration of Word document operations—such as creation, reading, and editing—directly into their software applications. Within a Word document, document elements serve as the foundational components that compile the document's content.
+IronWord is a library designed for .NET C# developers. It facilitates the integration of Word document operations—such as creation, reading, and editing—directly into their software applications. Within a Word document, document elements serve as the foundational components that compile the document's content.
 
-## Quickstart: Combine Styled Text and an Image Seamlessly
+## Quickstart: Combine Styled Text and an Image
 
 Using IronWord, you can swiftly incorporate rich content. This allows you to merge styled text with an embedded image within a single paragraph, all while saving the document through an efficient, fluent code block. This is ideal for developers eager to begin without unnecessary steps.
 

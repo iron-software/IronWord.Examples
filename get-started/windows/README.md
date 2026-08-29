@@ -3,7 +3,7 @@
 > Full guide: [Implementing IronWord for .NET on Windows Platforms](https://ironsoftware.com/csharp/word/get-started/windows/)
 
 
-IronWord is fully compatible with Windows 10, Windows 11, and Windows Server 2016 or later versions. It seamlessly integrates with various .NET platforms including .NET 10, 9, 8, 7, 6, .NET Core, .NET Standard 2.0+, and .NET Framework 4.6.2 and higher.
+IronWord is fully compatible with Windows 10, Windows 11, and Windows Server 2016 or later versions. It integrates with various .NET platforms including .NET 10, 9, 8, 7, 6, .NET Core, .NET Standard 2.0+, and .NET Framework 4.6.2 and higher.
 
 One of the key advantages of IronWord is that it does not depend on graphical frameworks like `System.Drawing`. This attribute makes it ideal for non-GUI server environments. Thus, IronWord excels in Windows Server Core setups where traditional graphical libraries might not be available.
 

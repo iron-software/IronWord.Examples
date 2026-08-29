@@ -7,7 +7,7 @@ The outline effect on text involves adding a distinct, visible border to each ch
 
 ### Instant Overview: Implementing a Standard Text Outline
 
-Effortlessly append a standard outline to your text with IronWord by setting up a `TextStyle` object to utilize `TextOutlineEffect.DefaultEffect`. This method provides a straightforward approach for developers to enhance text appearance promptly.
+append a standard outline to your text with IronWord by setting up a `TextStyle` object to utilize `TextOutlineEffect.DefaultEffect`. This method provides a straightforward approach for developers to enhance text appearance promptly.
 
 ```cs
 new IronWord.Models.TextStyle { TextEffect = new IronWord.Models.TextEffect { TextOutlineEffect = IronWord.Models.TextOutlineEffect.DefaultEffect } }

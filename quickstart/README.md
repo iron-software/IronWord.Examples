@@ -5,7 +5,7 @@
 
 ## IronWord: Word Document Library for .NET
 
-**IronWord** is a Word document library crafted by Iron Software. It specializes in offering robust tools for manipulating Word documents within .NET applications.
+**IronWord** is a Word document library crafted by Iron Software. It specializes in offering tools for manipulating Word documents within .NET applications.
 
 - Load, edit, and save Word and Docx files.
 - `PageSetup`: Adjust paper size, orientation, margins, and background color.

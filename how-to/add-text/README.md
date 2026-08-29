@@ -4,7 +4,7 @@
 
 Incorporating automated text entry into applications is crucial for creating reports, building templates, and populating data dynamically within applications.
 
-This guide will teach you how to seamlessly add text to a DOCX file using IronWord.
+This guide will teach you how to add text to a DOCX file using IronWord.
 
 ## Inserting Text
 

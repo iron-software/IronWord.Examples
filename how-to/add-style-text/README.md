@@ -12,7 +12,7 @@ This guide will walk you through the process of applying custom text styles usin
 
 ## Example: Applying Text Styles
 
-The process of applying text styles in IronWord is intuitive and efficient. Begin by creating a `WordDocument` object alongside a `TextContent` object that contains your text. Configure a new `TextStyle` object for the `Style` attribute of your text, setting properties like `IsBold`, `Color`, and `TextFont`. Further beautify your text with options such as underline or double strikethrough.
+Applying text styles in IronWord takes three objects. Begin by creating a `WordDocument` object alongside a `TextContent` object that contains your text. Configure a new `TextStyle` object for the `Style` attribute of your text, setting properties like `IsBold`, `Color`, and `TextFont`. Further beautify your text with options such as underline or double strikethrough.
 
 To complete the styling, add the text to a `Paragraph`, integrate the paragraph into your document, and then save the styled document.
 

@@ -40,7 +40,7 @@ doc.SaveAs("inserted-image.docx");
 
 ## Adding Image via Stream
 
-Adding images from local directories or static URLs is efficiently managed with the previously illustrated method. For images protected by secure APIs that require authentication, utilizing the `Stream` method is the recommended approach. In the following example, an HTTP client sends authorization tokens, retrieves the image as an authenticated stream, and seamlessly adds it to the document before the final export.
+Adding images from local directories or static URLs is efficiently managed with the previously illustrated method. For images protected by secure APIs that require authentication, utilizing the `Stream` method is the recommended approach. In the following example, an HTTP client sends authorization tokens, retrieves the image as an authenticated stream, and adds it to the document before the final export.
 
 ```csharp
 using IronWord;

@@ -7,7 +7,7 @@ A table, essentially a structured grid, comprises rows and columns that intersec
 
 ## Quickstart: Add a Table Efficiently
 
-In this streamlined approach using IronWord, you can quickly generate a table, configure its properties, populate it, embed it in a document, and save the outcome. This enables you to produce a DOCX document with a well-designed table effortlessly.
+In this simplified approach using IronWord, you can quickly generate a table, configure its properties, populate it, embed it in a document, and save the outcome. This enables you to produce a DOCX document with a well-designed table.
 
 ```cs
 var table = new IronWord.Models.Table(3, 4);
