@@ -1,6 +1,6 @@
 # Enhancing Text with a Glow Effect
 
-> Full guide: [Enhancing Text with a Glow Effect](https://ironsoftware.com/csharp/word/how-to/text-effect-glow-effect/)
+> Full guide: [Enhancing Text with a Glow Effect](https://ironsoftware.com/csharp/word/how-to/text-effect-glow-effect/?utm_source=github)
 
 A glow effect on text equips it with a luminous aura, making it seem as though the text is backlit. This can vastly improve readability while simultaneously catching the viewer's eye.
 

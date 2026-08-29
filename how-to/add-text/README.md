@@ -1,6 +1,6 @@
 # How to Insert Text into a DOCX File Using IronWord
 
-> Full guide: [How to Insert Text into a DOCX File Using IronWord](https://ironsoftware.com/csharp/ppt/how-to/add-text/)
+> Full guide: [How to Insert Text into a DOCX File Using IronWord](https://ironsoftware.com/csharp/ppt/how-to/add-text/?utm_source=github)
 
 Incorporating automated text entry into applications is crucial for creating reports, building templates, and populating data dynamically within applications.
 
@@ -8,7 +8,7 @@ This guide will teach you how to add text to a DOCX file using IronWord.
 
 ## Inserting Text
 
-IronWord simplifies the process of inserting text into a DOCX file. This capability can be expanded to include text with various formats, stylized paragraphs, and more intricate document constructs as detailed in the [styling guide](https://ironsoftware.com/csharp/word/how-to/add-style-text/).
+IronWord simplifies the process of inserting text into a DOCX file. This capability can be expanded to include text with various formats, stylized paragraphs, and more intricate document constructs as detailed in the [styling guide](https://ironsoftware.com/csharp/word/how-to/add-style-text/?utm_source=github).
 
 ```csharp
 using IronWord;

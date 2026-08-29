@@ -1,4 +1,4 @@
-> Full guide: [Edit text](https://ironsoftware.com/csharp/word/examples/edit-text/)
+> Full guide: [Edit text](https://ironsoftware.com/csharp/word/examples/edit-text/?utm_source=github)
 
 The "Edit Text" function in IronWord equips developers with the capability to modify text in an existing DOCX file. By utilizing the `Paragraphs` collection, developers can pinpoint and alter the `Text` objects within paragraphs using the `ReplaceText` method. This functionality is essential for scenarios that require dynamic text updates such as modifying report sections, replacing placeholder text, or amending content based on external data or user inputs.
 
@@ -18,4 +18,4 @@ This snippet illustrates how to edit text within a Word document using IronWord.
 
 The flexibility of this setup becomes apparent with more dynamic content adjustment needs. For instance, the second change involves navigating deeper within the second paragraph. Like the prior instance, `Paragraphs` collection access is followed by narrowing down through the `Texts` array and the `Text` property, allowing precise, confident updates to existing content.
 
-[Explore Document Elements in IronWord Tutorial](https://ironsoftware.com/csharp/word/tutorials/document-element/)
+[Explore Document Elements in IronWord Tutorial](https://ironsoftware.com/csharp/word/tutorials/document-element/?utm_source=github)

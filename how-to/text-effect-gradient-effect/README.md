@@ -1,6 +1,6 @@
 # Applying Gradient Effects to Text
 
-> Full guide: [Applying Gradient Effects to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-gradient-effect/)
+> Full guide: [Applying Gradient Effects to Text](https://ironsoftware.com/csharp/word/how-to/text-effect-gradient-effect/?utm_source=github)
 
 
 Gradient effects on text create dynamic visual transitions between colors, adding dimensions, enhancing the visual appeal, and making the text visually striking. These effects can either be linear, transitioning colors along a straight path, or radial, emanating from a central point.

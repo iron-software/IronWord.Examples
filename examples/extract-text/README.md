@@ -1,4 +1,4 @@
-> Full guide: [Extract text](https://ironsoftware.com/csharp/word/examples/extract-text/)
+> Full guide: [Extract text](https://ironsoftware.com/csharp/word/examples/extract-text/?utm_source=github)
 
 Extracting an extensive amount of text from documents can often be a tedious and lengthy process, particularly when faced with copious amounts of paragraphs and tables. Fortunately, the `ExtractText` method from IronWord offers a timely solution. This method allows developers to efficiently extract a defined amount of text from a document, removing the need for repetitive looping and facilitating easier access to the `Text` property. By using this method, developers can enhance their productivity and conserve valuable time.
 
@@ -22,4 +22,4 @@ Although the previously described example extracts all text from the document, t
 
 When referencing an index from the `Paragraphs`, it fetches and extracts text only from the document's initial paragraph, subsequently outputting it to the console. Similarly, the `Last` method is utilized on the `Paragraphs` array to extract and output only the text from the document’s concluding paragraph.
 
-[Explore the IronWord API for Advanced Text Extraction](https://ironsoftware.com/csharp/word/object-reference/api/IronWord.html)
+[Explore the IronWord API for Advanced Text Extraction](https://ironsoftware.com/csharp/word/object-reference/api/IronWord.html?utm_source=github)

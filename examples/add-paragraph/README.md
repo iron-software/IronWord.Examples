@@ -1,4 +1,4 @@
-> Full guide: [Add paragraph](https://ironsoftware.com/csharp/word/examples/add-paragraph/)
+> Full guide: [Add paragraph](https://ironsoftware.com/csharp/word/examples/add-paragraph/?utm_source=github)
 
 The IronWord "add-paragraph" capability enables developers to insert entire paragraphs into a Word document. This functionality is essential for efficiently structuring and organizing different segments of text into a unified section. Suitable for dynamic documents such as reports, articles, or letters, this feature supports grouping and styling text together.
 
@@ -12,4 +12,4 @@ This functionality comes with formatting options, allowing for the application o
 4. **Embedding Paragraph into Document:** Following the text insertion, use the `AddParagraph` method on the `WordDocument` instance to integrate the paragraph into the main document. This method assures the paragraph's correct placement, preserving the document’s structural integrity and layout.
 5. **Document Preservation:** Conclude by calling the `SaveAs` method to save the document as `"document.docx"` on your local disk. This saves all previous modifications to the new DOCX file, encapsulating the recently added paragraph.
 
-[Explore more on Document Elements with IronWord](https://ironsoftware.com/csharp/word/tutorials/document-element/)
+[Explore more on Document Elements with IronWord](https://ironsoftware.com/csharp/word/tutorials/document-element/?utm_source=github)

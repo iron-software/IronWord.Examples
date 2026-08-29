@@ -1,4 +1,4 @@
-> Full guide: [Add style text](https://ironsoftware.com/csharp/word/examples/add-style-text/)
+> Full guide: [Add style text](https://ironsoftware.com/csharp/word/examples/add-style-text/?utm_source=github)
 
 The "Add Style Text" capability in IronWord provides developers the tools to include a variety of text styles when integrating content into a DOCX file. This function allows precise customization of text attributes, including font type, size, color, and styles such as bold, italic, underline, and strike-through. Developers can configure a `Text` object's `TextStyle`, enabling them to define the visual elements of text sections on a granular level and ensure the document maintains a polished and tailored appearance.
 
@@ -10,4 +10,4 @@ The following code sample demonstrates the procedure for adding and styling text
 
 Once the text has been appropriately styled, it is added to the document using the `AddText` method. This function integrates the configured text into the DOCX format. To finalize the process, the `SaveAs` method is utilized, exporting the document as "`styled_document.docx`". As a result, the Word document will contain the text with the designated styles, ensuring all typography and formatting characteristics are retained in the exported file.
 
-[Explore Document Element Tutorials for More Styling Tips](https://ironsoftware.com/csharp/word/tutorials/document-element/)
+[Explore Document Element Tutorials for More Styling Tips](https://ironsoftware.com/csharp/word/tutorials/document-element/?utm_source=github)

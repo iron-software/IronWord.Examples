@@ -1,6 +1,6 @@
 # Setting Up IronWord on macOS
 
-> Full guide: [Setting Up IronWord on macOS](https://ironsoftware.com/csharp/word/get-started/mac/)
+> Full guide: [Setting Up IronWord on macOS](https://ironsoftware.com/csharp/word/get-started/mac/?utm_source=github)
 
 
 IronWord provides .NET developers with the capability to read, create, and edit Word documents in C# without the need for Microsoft Office. Although it is generally utilized on Windows and Linux, setting up IronWord on macOS is straightforward with proper configuration.

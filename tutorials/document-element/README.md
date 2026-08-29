@@ -1,6 +1,6 @@
 # Document Element Tutorial
 
-> Full guide: [Document Element Tutorial](https://ironsoftware.com/csharp/word/tutorials/document-element/)
+> Full guide: [Document Element Tutorial](https://ironsoftware.com/csharp/word/tutorials/document-element/?utm_source=github)
 
 
 IronWord is a library designed for .NET C# developers. It facilitates the integration of Word document operations—such as creation, reading, and editing—directly into their software applications. Within a Word document, document elements serve as the foundational components that compile the document's content.

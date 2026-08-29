@@ -1,6 +1,6 @@
 # Enhancing Text with an Outline Effect
 
-> Full guide: [Enhancing Text with an Outline Effect](https://ironsoftware.com/csharp/word/how-to/text-effect-text-outline-effect/)
+> Full guide: [Enhancing Text with an Outline Effect](https://ironsoftware.com/csharp/word/how-to/text-effect-text-outline-effect/?utm_source=github)
 
 
 The outline effect on text involves adding a distinct, visible border to each character. This effect is not only visually appealing but also enhances the legibility of text, especially against complex backgrounds. Users can tailor this effect by adjusting the color, width, and style of the outline to meet particular design requirements. This technique is widely used across graphic design, typography, and digital creation to give texts a prominent or artistic flair.
