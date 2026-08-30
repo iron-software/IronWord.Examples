@@ -48,7 +48,7 @@ Each folder contains a self-contained .NET project you can open and run:
 - Page setup: paper size, orientation, margins, background color
 - Bullet and numbered lists with custom indentation and nesting
 - Find-and-replace and content extraction for data processing
-- Saving to file, `MemoryStream`, or `byte[]` for HTTP delivery
+- Saving to a file path with `SaveAs`, or to `byte[]` with `Save()` for in-memory and HTTP delivery
 
 ## Platform support
 
